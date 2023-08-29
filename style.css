@@ -1,0 +1,60 @@
+@font-face {
+	font-family: Gotham Rounded;
+	src: url("font.otf") format("opentype");
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	font-family: Gotham Rounded;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: url("bg.png") no-repeat fixed center;
+	background-size: cover;
+}
+
+.container {
+	width: 700px;
+	max-width: 90%;
+}
+
+.black {
+	background-color: black;
+	padding: 10px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 0 0 10px 2px;
+}
+
+.answer {
+	display: grid;
+	grid-template-columns: repeat(1, auto);
+	gap: 10px;
+}
+
+.btn {
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-size: 30px;
+	background-color: #f7ce6a;
+	outline: none;
+	color: black;
+	text-decoration: none;
+}
+
+.black h1 {
+	color: yellow;
+}
+
+.black p {
+	font-size: 18px;
+	color: white;
+}
