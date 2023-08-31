@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style-ba.css">
+</head>
+
+<body>
+
+    <div class="mainSection">
+
+        <div id="one" class="bal-container">
+            <div class="bal-after">
+                <img src="images/d.webp">
+                <div class="bal-afterPosition afterLabel">
+                    Depois
+                </div>
+            </div>
+
+            <div class="bal-before">
+                <div class="bal-before-inset">
+                    <img src="images/a.webp">
+                    <div class="bal-beforePosition beforeLabel">
+                        Antes
+                    </div>
+                </div>
+            </div>
+
+            <div class="bal-handle">
+                <span class=" handle-left-arrow"></span>
+                <span class="handle-right-arrow"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/script-ba.js"></script>
+
+    <script>
+        new BeforeAfter({
+            id: '#one'
+        });
+    </script>
+
+</body>
+
+</html>
