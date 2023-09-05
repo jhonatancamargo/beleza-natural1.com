@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>(1) WhatsApp</title>
+  <link rel="icon" href="favicon/fav.webp" type="image/webp">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,300'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css'>
+  <link rel='stylesheet' href='https://rawgit.com/marvelapp/devices.css/master/assets/devices.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <!-- pixel facebook-->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1325068758131243');
+fbq('track', 'PageView');
+fbq('track', 'pv');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1325068758131243&ev=PageView&noscript=1"
+/></noscript>
+<!-- fim do pixel facebook -->
+
+</head>
+<body>
+  <div class="page">
+    <div class="chat-container">
+      <div class="user-bar">
+        <a href="https://beleza-natural1.cf/FT/promocao">
+        <div class="back">
+          <i class="zmdi zmdi-arrow-left"></i>
+        </div>
+      </a>
+        <div class="avatar">
+          <img src="https://i.postimg.cc/wjDqv6gV/host-Avatar.jpg" alt="Avatar">
+        </div>
+        <div class="name">
+          <span>Julia Natura</span>
+          <span class="status">online</span>
+        </div>
+        <div class="actions more">
+          <i class="zmdi zmdi-more-vert"></i>
+        </div>
+        <div class="actions attachment">
+          <i class="zmdi zmdi-phone"></i>
+        </div>
+        <div class="actions">
+          <img src="https://i.ibb.co/LdnbHSG/ic-action-videocall.png" />
+        </div>
+      </div>
+        <div class="conversation-container">
+          <typebot-standard></typebot-standard>
+        </div>
+    </div>
+  </div>
+
+  <!-- Colar Código Typebot abaixo entre as tags <script>-->
+ <script>
+
+const typebotInitScript = document.createElement("script");
+typebotInitScript.type = "module";
+typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.1/dist/web.js'
+  
+Typebot.initStandard({ typebot: "xo6920" });
+`;
+document.body.append(typebotInitScript);
+
+
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
+</body>
+</html>
+<!--script>
+ // backiredirect
+
+(function(b) {
+    var a = {
+        version: "0.0.1",
+        history_api: typeof history.pushState !== "undefined",
+        init: function() {
+            b.location.hash = "#no-back";
+            a.configure();
+        },
+        hasChanged: function() {
+            if (b.location.hash == "#no-back") {
+                b.location.hash = "#";
+                var redirectUrl = "../FT/promocao";
+                if (!a.isFromMainPage()) {
+                    redirectUrl += "?src=RED";
+                }
+                b.location.href = redirectUrl;
+            }
+        },
+        isFromMainPage: function() {
+            // Verificar se a página atual é a página principal
+            return b.location.pathname === "/";
+        },
+        checkCompat: function() {
+            if (b.addEventListener) {
+                b.addEventListener("hashchange", a.hasChanged, false);
+            } else {
+                if (b.attachEvent) {
+                    b.attachEvent("onhashchange", a.hasChanged);
+                } else {
+                    b.onhashchange = a.hasChanged;
+                }
+            }
+        },
+        configure: function() {
+            if (b.location.hash == "#no-back") {
+                if (this.history_api) {
+                    history.pushState(null, "", "#");
+                } else {
+                    b.location.hash = "#";
+                    var redirectUrl = "../FT/promocao";
+                    if (!a.isFromMainPage()) {
+                        redirectUrl += "?src=RED";
+                    }
+                    b.location.href = redirectUrl;
+                }
+            }
+            a.checkCompat();
+            a.hasChanged();
+        }
+    };
+
+    if (typeof define === "function" && define.amd) {
+        define(function() {
+            return a;
+        });
+    } else {
+        if (typeof module === "object" && module.exports) {
+            module.exports = a;
+        } else {
+            b.noback = a;
+        }
+    }
+
+    a.init();
+})(window);
+</script-->
+<script 
+disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+ </script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-1DFMKE452Y"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+
+  gtag('config', 'G-1DFMKE452Y')
+</script>
