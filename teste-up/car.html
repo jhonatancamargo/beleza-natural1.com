@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        /* Reset de estilos padrão */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo da seção */
+        .custom-section {
+            background-color: #840059;
+            padding: 8px;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Estilo do card */
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            max-width: 24%;
+            margin: auto;
+        }
+
+        /* Gradiente que envolve o texto */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, #840059);
+            z-index: -1;
+        }
+
+        /* Estilo do banner no topo do card */
+        .card-banner {
+            background-color: #f7a08b;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 53px;
+        }
+
+        /* Estilo do texto dentro do banner */
+        .banner-text {
+            color: white;
+            font-size: 36px;
+            line-height: 53px; /* Centralizar verticalmente */
+            text-align: center;
+            /* Estilos adicionais */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Estilo da imagem */
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin: 47px 0 0 0;
+        }
+
+        /* Estilo dos botões */
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+             /* Largura fixa para todos os botões */
+             background-color: #0091ff;
+             border-radius: 5px;
+             border: 1px solid #000;
+             margin-bottom: 10px;
+             cursor: pointer;
+             transition: background-color 0.3s;
+             text-align: center; /* Alinhe o texto ao centro horizontalmente */
+             width: calc(33.33% - 10px)!important; /* Largura de 33.33% com margem entre os botões */
+        }
+
+        .buttons a {
+             /* Largura fixa para todos os botões */
+             font-weight: 700;
+             color: #fff;
+             font-size: 28px;
+             display: flex; 
+             justify-content: center; 
+             align-items: center;
+             text-decoration: none; 
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 768px) {
+            .card {
+                    max-width: 100%;
+
+            }
+
+            .buttons button {
+                width: calc(50% - 10px); /* Largura de 50% com margem entre os botões */
+            }
+        }
+
+    </style>
+    <title>Seção com Card</title>
+</head>
+<body>
+    <section class="custom-section">
+        <div class="card">
+            <div class="card-banner">
+                <div class="banner-text">COMPRE 1 LEVE 2</div>
+            </div>
+            <img src="img/oferta.png" alt="Imagem do Card">
+            <div class="buttons">
+                <button><a href="#">P</a></button>
+                <button><a href="#">M</a></button>
+                <button><a href="#">G</a></button>
+                <button><a href="#">GG</a></button>
+                <button><a href="#">XG</a></button>
+                <button><a href="#">2XG</a></button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
