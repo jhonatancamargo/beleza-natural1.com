@@ -43,8 +43,16 @@
         // Mostra o loader por 5 segundos
         document.getElementById('loader').style.display = 'block';
         setTimeout(function() {
-            // Redireciona para o WhatsApp após 5 segundos
-            window.location.href = 'https://api.whatsapp.com/send?phone=5547991805630&text=Oi%20vi%20seu%20anuncio%20no%20Facebook%20*Jhonatan*%20e%20tenho%20interesse%20no%20ar%20condicionado.';
+            // Redireciona para o WhatsApp usando o esquema de URL personalizado
+            var mobileWhatsAppURL = 'whatsapp://send?phone=5547991805630&text=Oi%20vi%20seu%20anuncio%20no%20Facebook%20*Jhonatan*%20e%20tenho%20interesse%20no%20ar%20condicionado.';
+            
+            // Verifica se o dispositivo suporta o esquema de URL personalizado
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                window.location.href = mobileWhatsAppURL;
+            } else {
+                // Redireciona para a versão web em navegadores desktop
+                window.location.href = 'https://web.whatsapp.com/';
+            }
         }, 4000); // 5000 milissegundos (5 segundos)
     </script>
     <script>
