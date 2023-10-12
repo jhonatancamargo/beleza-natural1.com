@@ -226,3 +226,70 @@ disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
 
   gtag('config', 'G-1DFMKE452Y')
 </script>
+
+<--Whatsapp botão-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Botão WhatsApp - VI</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <style>
+    .whatsapp-link {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 1px 1px 2px #888;
+      z-index: 1000;
+      display: none; /* Inicia oculto */
+    }
+
+    .fa-whatsapp {
+      margin-top: 16px;
+    }
+
+    .pulse {
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="whatsapp-link pulse" href="https://api.whatsapp.com/send?phone=554791234737&text=Ol%C3%A1%20tudo%20bem%20quero%20participar%20do%20programa%20bumbum%20invejado*" target="_blank">
+    <i class="fa fa-whatsapp"></i>
+  </a>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+
+      if (scrollPercentage >= 0) {
+        document.querySelector('.whatsapp-link').style.display = 'block';
+      } else {
+        document.querySelector('.whatsapp-link').style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
