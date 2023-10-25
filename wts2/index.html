@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecionamento Automático para WhatsApp</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            transform: scale(1.5); /* Aumenta o tamanho de todos os elementos */
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #0074E1;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            /* Estilos para dispositivos móveis (largura máxima de 768px) */
+            .container {
+                transform: scale(1.2); /* Ajuste o fator de escala conforme necessário para dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>Abrindo o WhatsApp</h1>
+        <p>Aguarde, você está sendo redirecionado para o WhatsApp...</p>
+    </div>
+
+    <script>
+        // Função para verificar se o usuário está em um dispositivo móvel
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Função para redirecionar para o WhatsApp
+        function redirectToWhatsApp() {
+            if (isMobile()) {
+                window.location.href = "whatsapp://send?phone=5547991805630&text=Quero%20fazer%20um%20orçamento";
+            } else {
+                // Redirecionar para a versão web do WhatsApp ou tomar outra ação, se desejado
+                window.location.href = "https://web.whatsapp.com/send?phone=5547991805630&text=Quero%20fazer%um%20orçamento";
+            }
+        }
+
+        // Chama a função para redirecionamento após um atraso de 3 segundos
+        setTimeout(redirectToWhatsApp, 3000);
+    </script>
+</body>
+</html>
