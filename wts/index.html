@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="3;url=https://wa.me/5547991805630?text=Quero%20fazer%20um%20orçamento">
+    <title>Redirecionamento Automático para WhatsApp</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            transform: scale(1.5); /* Aumenta o tamanho de todos os elementos */
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #0074E1;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            /* Estilos para dispositivos móveis (largura máxima de 768px) */
+            .container {
+                transform: scale(1.2); /* Ajuste o fator de escala conforme necessário para dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="spinner"></div>
+        <h1>Abrindo o WhatsApp</h1>
+        <p>Aguarde, você está sendo redirecionado para o WhatsApp...</p>
+    </div>
+</body>
+</html>
