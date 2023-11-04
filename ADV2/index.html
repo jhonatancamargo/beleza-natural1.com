@@ -289,7 +289,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   });
 </script>
-
+<script>
+(function(w,d,s,t){
+    if(w._brpBstr)return;w._brpBstr=t;var f=d.getElementsByTagName(s)[0],j=d.createElement(s);
+    j.async=true;j.src="https://ev.braip.com/js/braip-booster.js?v="+t;
+    f.parentNode.insertBefore(j,f);
+})(window,document,'script',Date.now());
+</script>
  <script 
 disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
  </script>
