@@ -1,0 +1,724 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body,html {
+	font-family: 'Montserrat', sans-serif !important;
+}
+
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Reset */
+header.header h1{
+	margin: auto;
+	color: #fff;
+	font-size: 15px;
+	text-align: center;
+	font-weight: 500;
+}
+/* Header */
+header.header {
+    background: #E50000;
+    padding: 15px 0;
+}
+img.logo {
+    clear: both;
+    display: block;
+    width: 100px;
+    margin: -15px auto;
+}
+/* Header */
+
+/* Principal */
+section.principal {
+	padding: 75px 0;
+	background: #ffffff;
+}
+section.principal h1 {
+	color: #104B00;
+	font-size: 26px;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.principal h2 {
+	color: #808285;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.principal p {
+	color: #000000;
+	font-size: 21px;
+	font-weight: 500;
+	margin: -26px 0 0 36px;
+}
+a.cta2:hover {
+    color: #ffffff; /* Mantenha a mesma cor do texto ao passar o mouse */
+}
+a.cta2 {
+    background: #249004;
+    clear: both;
+    display: block;
+    padding: 17px 13px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 7px;
+}
+a.cta {
+	background: #ffffff;
+	clear: both;
+	display: block;
+	padding: 17px 13px;
+	text-align: center;
+	text-decoration: none;
+	color: #2f8c44;
+	font-size: 17px;
+	font-weight: 600;
+	border-radius: 10px;
+}
+a.cta:hover {
+	color: #ffffff;
+	background: #44c63d;
+}
+section.principal span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #000000;
+	margin-top: 10px;
+}
+img.potes-principal {
+    clear: both;
+    display: block;
+    width: 100%;
+}
+.pulsar {
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+@keyframes pulse{
+0%,100%{transform:scale(.9);opacity:.9;}
+50%{transform:scale(1);opacity:1;}
+}
+@-webkit-keyframes pulse{
+0%,100%{-webkit-transform:scale(.95);opacity:.7}
+50%{-webkit-transform:scale(1);opacity:1}
+}
+@-webkit-keyframes bounce {
+    from { }
+    to { -webkit-transform: translateY(-10px); }
+}
+@-moz-keyframes bounce { 
+    from { }
+    to { -moz-transform: translateY(-10px); }
+}
+@-ms-keyframes bounce { 
+    from { }
+    to { -ms-transform: translateY(-10px); }
+}
+@-o-keyframes bounce { 
+    from { }
+    to { -o-transform: translateY(-10px); }
+}
+@keyframes bounce { 
+    from { }
+    to { transform: translateY(-10px); }
+}
+.bounce {
+	-webkit-animation: bounce .4s ease infinite alternate;
+	-moz-animation: bounce .4s ease infinite alternate;
+	-ms-animation: bounce .4s ease infinite alternate;
+	-o-animation: bounce .4s ease infinite alternate;
+	animation: bounce .4s ease infinite alternate;
+}
+/* Principal */
+
+.poder-item {
+      border: 10px solid #1d211d; /* Cor da borda */
+      border-radius: 22px; /* Raio da borda */
+      padding: 17px; /* Espaçamento interno */
+      margin-bottom: 15px !important; /* Espaçamento entre itens */
+      background-image: linear-gradient(180deg, #249004 0%, #196801 100%); /* Cor de fundo interna */
+    }
+/* Veja o poder */
+section.poder {
+	color: #f2f2f2;
+	padding: 18px 0;
+	background: #1D211D;
+}
+img.h1-poder {
+	clear: both;
+	display: block;
+	width: 60%;
+	margin: 0 auto 20px auto;
+}
+section.poder h1 {
+	color: #ffffff;
+	font-size: 33px;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 16% 50px;
+}
+.poder-item {
+	margin-bottom: 8px !important;
+}
+img.icon-poder {
+    clear: both;
+    display: block;
+    width: 50%;
+    margin: 0 auto 10px auto;
+}
+section.poder h2 {
+	color: #ffffff;
+	font-size: 19px;
+	font-weight: 600;
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+section.poder p {
+	text-align: center;
+	margin: 0;
+}
+a.cta-poder {
+	width: 60%;
+	margin:  0 auto 15px auto;
+}
+section.poder span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #fff;
+}
+/* Veja o poder */
+
+/* Antes e Depois */
+section.antes-depois {
+	padding: 75px 0;
+	background: #E4FFE3;
+}
+section.antes-depois h1 {
+	color: #000000;
+	font-size: 34px;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.antes-depois h2 {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.antes-depois iframe {
+    width: 100%;
+    height: 500px;
+}
+section.antes-depois h3 {
+	color: #000000;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 40px 0;
+}
+section.antes-depois span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #000000;
+	margin-top: 10px;
+}
+/* Antes e Depois */
+
+/* Fórmula */
+.formula{
+	background-color: #E4FFE3;
+}
+/* Fórmula */
+
+/* diferencial */
+
+ section .diferencial-section {
+            overflow: hidden;
+            
+        }
+
+       .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8em;
+}
+
+        .titulo {
+            text-align: center;
+        }
+        .titulo h2{
+        	color: #000000;
+        	font-size: 40px;
+        	font-weight: 800;
+        	text-align: center;
+        	margin: 0px 20% 50px;
+        }
+
+        .texto-e-imagem {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .textos {
+            flex: 1;
+            margin: auto;
+            font-size: 23px;
+        }
+
+        .imagem {
+            flex: 1;
+            text-align: center;
+            margin: auto 12px;
+        }
+
+        .imagem img {
+            max-width: 70%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+
+        	.imagem img {
+    max-width: 100%;}
+
+        	.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+    .texto-e-imagem {
+        flex-direction: column; /* Manter o flex-direction como column para dispositivos móveis */
+    }
+
+    .titulo,
+    .imagem,
+    .textos {
+        flex: 1;
+        max-width: 100%;
+    }
+    .titulo h2{
+    	color: #000000;
+    	font-size: 25px;
+    	font-weight: 800;
+    	text-align: center;
+    	margin: 0 0 50px 0;
+    }
+
+    .imagem {
+        order: 2; /* Mover a imagem para baixo no empilhamento */
+    }
+
+    .textos {
+        order: 3; /* Mover o texto para baixo no empilhamento */
+        margin-top: 15px;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+/* diferencial */
+
+/* Resultados */
+section.resultados {
+    padding: 75px 0;
+    background: #292728;
+}
+section.resultados h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+section.resultados h2 {
+    color: #808285;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+section.resultados h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+a.cta-resultados {
+    width: 40%;
+    margin: 50px auto 0 auto;
+}
+section.resultados span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #ffffff;
+	margin: 15px auto 0 auto;
+}
+img.foto-resultado {
+    clear: both;
+    display: block;
+    width: 85%;
+    margin: 20px auto;
+}
+/* Resultados */
+
+/* Estilo específico para os cartões dentro da seção de resultados */
+section.resultados .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     /* Adiciona espaçamento entre os cards */
+}
+
+/* Desabilitar seleção de texto e eventos de clique em todo o site */
+body {
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Permitir seleção de texto e eventos de clique nos botões específicos */
+.cta, .cta2, .accordion, .banner-oferta, .an{
+    user-select: text;
+    pointer-events: auto;
+}
+/* Permitir seleção de texto e eventos de clique nos botões específicos */
+
+
+section.resultados .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section.resultados .card .card-img-top {
+    margin-top: 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    display: block;
+    width: 93%;
+}
+
+section.resultados .card-body .card-title {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 800;
+}
+
+section.resultados .card-body .card-text {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+.col-lg-6{
+    padding: 4px;
+    border-radius: 36px;
+}
+/* Estilo específico para os cartões dentro da seção de resultados */
+
+/* Ajustar altura dos cards */
+@media (min-width: 768px) {
+    section.resultados .card {
+        height: 100%;
+    }
+}
+/* Estilo específico para os cartões dentro da seção de resultados */
+
+/*hediline 2 */
+
+/* Estilos para desktop */
+.hed2 {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 2em;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+	section.poder h1 {
+    font-size: 22px;
+    margin: 15px auto;
+}
+    .hed2 {
+        font-size: 14px; /* Tamanho de fonte diferente para dispositivos móveis */
+    }
+}
+
+/*hediline 2 */
+
+/* Garantia */
+section.garantia {
+	padding: 75px 0;
+}
+section.garantia h1 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+img.selo-garantia {
+    clear: both;
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+section.garantia {
+	text-align: center;
+}
+a.cta-garantia {
+    width: 40%;
+    margin: 50px auto 0 auto;
+}
+section.garantia span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #000000;
+	margin: 15px auto 0 auto;
+}
+/* Garantia */
+
+/* Oferta */
+section.oferta {
+    padding: 75px 0;
+    background: #292728;
+}
+
+section.oferta h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+section.oferta h2 {
+    color: #808285;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 3em 0;
+}
+section.oferta p {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+img.faixa-oferta {
+    clear: both;
+    display: block;
+    width: 60%;
+    margin: 0 auto 30px auto;
+}
+section.oferta .row {
+    justify-content: center;
+/* Oferta */
+}
+/* FAQ */
+    section.faq {
+    padding: 75px 0;
+}
+    section.faq h1 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+.faq-item {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    margin: 0 0 10px 0;
+}
+.accordion {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    border: none;
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    clear: both;
+    display: block;
+    padding: 20px 20px 30px 20px;
+    background: #c1c1c1;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    transition: all .4s linear;
+}
+    button.accordion svg {
+    margin-top: -5px;
+}
+    svg{
+	    color: #00ff36;
+}
+.panel {
+    padding: 0 25px;
+    background: #fafafa;
+    color: #000000;
+    max-height: 0;
+    margin-top: 1px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+    padding: 10px;
+    p {
+    margin: 25px 0;
+}
+/* FAQ */
+
+/* WhatsApp */
+    section.whatsapp {
+    padding: 75px 0;
+    background: #292728;
+}
+    section.whatsapp h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+    img.icon-wpp {
+    clear: both;
+    display: block;
+    width: 8%;
+    margin: 0 auto 50px auto;
+}
+    section.whatsapp p {
+	text-align: center;
+    color: #ffffff;
+}
+    a.cta-whatsapp {
+    width: 40%;
+    margin: 50px auto 0 auto;
+}
+    section.whatsapp span {
+	clear: both;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    margin: 15px auto 0 auto;
+}
+/* WhatsApp */
+
+/* Footer */
+    footer.footer {
+	padding: 50px 0;
+}
+    img.logo-ft {
+    clear: both;
+    display: block;
+    width: 80%;
+    margin: 0 auto 30px auto;
+}
+    img.nao-testado-animais {
+    clear: both;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+    footer.footer h1 {
+	clear: both;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+    a.link-ft {
+    clear: both;
+    display: block;
+    margin: 0 0 10px 0;
+}
+    img.formas-pagamento {
+	clear: both;
+    display: block;
+    width: 80%;
+}
+    img.compra-segura {
+	clear: both;
+    display: block;
+    width: 80%;
+}
+/* Footer */
+
+/* Responsivo */
+;
+    img {
+    max-width: 80%;
+}
+
+.ciclos-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+;
+    h2 {
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+;
+    p {
+    color: #000;
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: left;
+}
+
+;
+    button {
+    background-color: #00AC69;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 26px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Media query para dispositivos móveis */
+;
