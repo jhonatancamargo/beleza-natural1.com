@@ -1,0 +1,954 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body,html {
+	font-family: 'Montserrat', sans-serif !important;
+}
+/* Reset */
+body, html{
+	font-family: "1Montserrat" !important;
+}
+
+.oferta .row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    justify-content: center;
+    }
+
+.whatsapp a.cta {
+    background: #3D870F;
+    clear: both;
+    display: block;
+    padding: 9px 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 400;
+    width: 62%;
+    margin: 30px auto 10px auto;
+    border-radius: 14px;
+}
+/*tempo*/
+
+.tempo{
+	padding: 2em;
+	width: 43%;
+	text-align: center;
+	margin: auto;
+	margin-bottom: -1em;
+}
+.tempo h1{
+	background: #ae4c14;
+	max-width: 79%;
+	font-size: 24px;
+	margin: auto;
+	border-radius: 9px;
+	color: #fff;
+	padding: 17px;
+}
+h2 {
+    font-size: 24px !important;
+}
+
+.tempo p{
+    max-width: 72%;
+    font-weight: 400;
+    font-size: 20px;
+    margin: auto;
+    padding: 9px;
+}
+/*tempo*/
+ /*contador*/
+.countdown {
+        word-wrap: break-word;
+        width: 404px;
+        height: 150px;
+        text-align: center;
+        border-radius: 5px;
+        margin: 30px auto;
+        font-weight: lighter;
+    }
+    .countdown .label {
+        font-size: 12px;
+        color: #65584c;
+        text-align: center;
+        text-transform: uppercase;
+        display: inline-block;
+        letter-spacing: 2px;
+        padding: 7px 0;
+    }
+    .countdown .time {
+        color: #cc0808;
+        position: relative;
+        z-index: 1;
+        text-shadow: 1px 1px 0px #ccc;
+        font-size: 54px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        display: block;
+        font-weight: 800;
+    }
+    .countdown .labels {
+        width: 403px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: -33px;
+        font-weight: 900;
+    }
+    .countdown .labels .label {
+        font-size: 12px;
+        color: #65584c;
+        text-align: center;
+        text-transform: uppercase;
+        display: inline-block;
+        letter-spacing: 2px;
+        width: 33%;
+    }
+    
+    /* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .tempo {
+        width: 100%;
+        padding: 2em;
+    }
+
+    .tempo h1 {
+        font-size: 20px;
+        padding: 12px;
+        max-width: 100%;
+    }
+
+    .tempo p {
+        font-size: 18px;
+        max-width: 100%;
+        padding: 12px;
+    }
+   .garantia p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 22px;
+    font-weight: 400;
+   }
+
+   h2 {
+    font-size: 19px !important;
+}
+ 
+    .countdown {
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .countdown .label {
+        font-size: 10px;
+        padding: 5px 0;
+    }
+
+    .countdown .time {
+        font-size: 40px;
+        padding: 10px;
+        margin-top: -23px;
+    }
+
+    .countdown .labels .label {
+        font-size: 10px;
+        padding: 5px 0;
+    }
+    .countdown .labels {
+        width: 305px;
+        margin-top: -13px; /* Ajuste conforme necessário */
+         /* Centraliza horizontalmente */
+         /* Organiza verticalmente */
+         /* Centraliza verticalmente */
+        margin: -18px auto;
+        font-weight: 900;
+    }
+}
+    /*contador*/
+    p{
+    	font-size: 20px;
+    }
+
+/* Header */
+header.header {
+    background: #000000;
+    padding: 20px 0;
+}
+img.logo {
+    clear: both;
+    display: block;
+    width: 100px;
+    margin: -15px auto;
+}
+/* Header */
+
+/* Principal */
+section.principal {
+	padding: 75px 0;
+	background: #292728;
+}
+section.principal h1 {
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.principal h2 {
+	color: #808285;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.principal p {
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 5px 0;
+}
+a.cta {
+	background: #3D870F;
+	clear: both;
+	display: block;
+	padding: 11px 11px;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 400;
+	width: 75%;
+	margin: 30px auto 10px auto;
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 2px 37px 44px 46px;
+}
+a.cta:hover {
+	color: #ffffff;
+	background: #44c63d;
+}
+section.principal span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #ffffff;
+}
+img.potes-principal {
+    clear: both;
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+}
+.pulsar {
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+@keyframes pulse{
+0%,100%{transform:scale(.9);opacity:.9;}
+50%{transform:scale(1);opacity:1;}
+}
+@-webkit-keyframes pulse{
+0%,100%{-webkit-transform:scale(.95);opacity:.7}
+50%{-webkit-transform:scale(1);opacity:1}
+}
+@-webkit-keyframes bounce {
+    from { }
+    to { -webkit-transform: translateY(-10px); }
+}
+@-moz-keyframes bounce { 
+    from { }
+    to { -moz-transform: translateY(-10px); }
+}
+@-ms-keyframes bounce { 
+    from { }
+    to { -ms-transform: translateY(-10px); }
+}
+@-o-keyframes bounce { 
+    from { }
+    to { -o-transform: translateY(-10px); }
+}
+@keyframes bounce { 
+    from { }
+    to { transform: translateY(-10px); }
+}
+.bounce {
+	-webkit-animation: bounce .4s ease infinite alternate;
+	-moz-animation: bounce .4s ease infinite alternate;
+	-ms-animation: bounce .4s ease infinite alternate;
+	-o-animation: bounce .4s ease infinite alternate;
+	animation: bounce .4s ease infinite alternate;
+}
+/* Principal */
+
+/* Veja o poder */
+section.poder {
+	padding: 75px 0;
+}
+img.h1-poder {
+	clear: both;
+	display: block;
+	width: 60%;
+	margin: 0 auto 20px auto;
+}
+section.poder h1 {
+	color: #000000;
+	font-size: 40px;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+.poder-item {
+	margin-bottom: 50px;
+}
+img.icon-poder {
+    clear: both;
+    display: block;
+    width: 30%;
+    margin: 0 auto 10px auto;
+}
+section.poder h2 {
+	color: #000000;
+	font-size: 18px;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+section.poder p {
+	text-align: center;
+	margin: 0;
+}
+a.cta-poder {
+	width: 40%;
+	margin:  0 auto 15px auto;
+}
+section.poder span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #000000;
+}
+/* Veja o poder */
+
+/* Antes e Depois */
+section.antes-depois {
+	padding: 75px 0;
+	background: #292728;
+}
+section.antes-depois h1 {
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.antes-depois h2 {
+	color: #808285;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+section.antes-depois iframe {
+    width: 100%;
+    height: 500px;
+}
+section.antes-depois h3 {
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 40px 0;
+}
+section.antes-depois span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #ffffff;
+}
+/* Antes e Depois */
+
+/* Fórmula */
+section.formula {
+	padding: 75px 0;
+}
+section.formula  h1 {
+	color: #000000;
+	font-size: 40px;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 0 50px 0;
+}
+img.frasco-formula {
+    clear: both;
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+section.formula p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+}
+a.cta-formula {
+    width: 40%;
+    margin: 50px auto 0 auto;
+}
+section.formula  h2 {
+	color: #000000;
+	font-size: 25px;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+section.formula span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #000000;
+	margin: 15px auto 0 auto;
+}
+img.icon-formula {
+    clear: both;
+    display: block;
+    width: 50%;
+    margin: 50px auto 0 auto;
+}
+/* Fórmula */
+
+/* Resultados */
+section.resultados {
+    padding: 75px 0;
+    background: #292728;
+}
+section.resultados h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+section.resultados h2 {
+    color: #808285;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+section.resultados h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+a.cta-resultados {
+    width: 40%;
+    margin: 50px auto 0 auto;
+}
+section.resultados span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #ffffff;
+	margin: 15px auto 0 auto;
+}
+img.foto-resultado {
+    clear: both;
+    display: block;
+    width: 85%;
+    margin: 20px auto;
+}
+/* Resultados */
+
+/* Garantia */
+section.garantia {
+	padding: 75px 0;
+}
+section.garantia h1 {
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+img.selo-garantia {
+    clear: both;
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+section.garantia {
+	text-align: center;
+	background: #2a6510;
+	color: #fff;
+}
+a.cta-garantia {
+    width: 40%;
+    margin: 50px auto 0 auto;
+}
+section.garantia span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #000000;
+	margin: 15px auto 0 auto;
+}
+/* Garantia */
+
+/* Oferta */
+section.oferta {
+    padding: 75px 0;
+    background: #2a6510;
+}
+section.oferta h1 {
+    color: #ffffff;
+    font-size: 29px;
+    font-weight: 800;
+    text-align: center;
+}
+section.oferta h2 {
+    color: #808285;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+section.oferta p {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1em;
+}
+img.faixa-oferta {
+    clear: both;
+    display: block;
+    width: 39%;
+    margin: 29px auto 30px auto;
+}
+/* Oferta */
+
+/* FAQ */
+section.faq {
+    padding: 75px 0;
+}
+section.faq h1 {
+    color: #000000;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+.faq-item {
+    clear: both;
+    display: block;
+    overflow: hidden;
+	margin: 0 0 10px 0;
+}
+.accordion {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+	border: none;
+	position: relative;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    clear: both;
+    display: block;
+    padding: 20px 20px 30px 20px;
+    background: #c1c1c1;
+    -webkit-transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    transition: all .4s linear;
+}
+button.accordion svg {
+    margin-top: -5px;
+}
+svg{
+	    color: #00ff36;
+
+}
+.panel {
+    padding: 0 25px;
+    background: #fafafa;
+    color: #000000;
+    max-height: 0;
+    margin-top: -12px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.panel p {
+    margin: 25px 0;
+}
+/* FAQ */
+
+/* WhatsApp */
+section.whatsapp {
+    padding: 75px 0;
+    background: #292728;
+}
+section.whatsapp h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+img.icon-wpp {
+    clear: both;
+    display: block;
+    width: 8%;
+    margin: 0 auto 50px auto;
+}
+section.whatsapp p {
+	text-align: center;
+	color: #ffffff;
+}
+a.cta-whatsapp {
+    width: 78%;
+    margin: 16px auto 9px auto;
+}
+section.whatsapp span {
+	clear: both;
+	display: block;
+	text-align: center;
+	color: #ffffff;
+	margin: 15px auto 0 auto;
+}
+/* WhatsApp */
+
+/* Footer */
+footer.footer {
+	padding: 50px 0;
+	background-color: #000;
+}
+img.logo-ft {
+    clear: both;
+    display: block;
+	width: 80%;
+    margin: 0 auto 30px auto;
+}
+img.nao-testado-animais {
+    clear: both;
+    display: block;
+	width: 80%;
+    margin: 0 auto;
+}
+footer.footer h1 {
+	clear: both;
+	display: block;
+	font-size: 14px;
+	color: #ffffff;
+	margin: 0 0 10px 0;
+	font-family: sans-serif;
+}
+a.link-ft {
+    clear: both;
+    display: block;
+    margin: 0 0 10px 0;
+}
+img.formas-pagamento {
+	clear: both;
+	display: block;
+	width: 80%;
+}
+img.compra-segura {
+	clear: both;
+	display: block;
+	width: 80%;
+}
+/* Footer */
+
+/* Responsivo */
+@media (max-width: 800px) {
+	img.logo {
+		width: 98px;
+	}
+	/* Principal */
+	section.principal, section.poder {
+		padding: 50px 0;
+	}
+	section.principal h1 {
+		font-size: 22px;
+	}
+	section.principal h2 {
+		font-size: 18px;
+	}
+	section.principal p {
+		font-size: 14px;
+	}
+	a.cta {
+		width: 64%;
+	}
+	section.principal span {
+		font-size: 14px;
+	}
+	/* Principal */
+	
+	/* Poder */
+	img.h1-poder {
+		width: 100%;
+	}
+	section.poder h1 {
+		font-size: 22px;
+		margin: 0 0 30px 0;
+	}
+	section.poder span {
+		font-size: 14px;
+	}
+	/* Poder */
+	
+	/* Antes e Depois */
+	section.antes-depois {
+		padding: 50px 0;
+	}
+	section.antes-depois h1 {
+		font-size: 22px;
+	}
+	section.antes-depois h3 {
+		font-size: 15px;
+		margin: 20px 0;
+	}
+	section.antes-depois span {
+		font-size: 14px;
+	}
+	/* Antes e Depois */
+	
+	/* Fórmula */
+	section.formula {
+		padding: 50px 0;
+	}
+	section.formula h1 {
+		font-size: 22px;
+	}
+	img.frasco-formula {
+		margin: 0 auto 30px auto;
+	}
+	section.formula p {
+		font-size: 16px;
+	}
+	section.formula span {
+		font-size: 14px;
+	}
+	/* Fórmula */
+	
+	/* Resultados */
+	section.resultados {
+		padding: 50px 0;
+	}
+	section.resultados h1 {
+		font-size: 22px;
+	}
+	section.resultados h2 {
+		font-size: 20px;
+	}
+	section.resultados h3 {
+		font-size: 18px;
+		margin: 0 0 30px 0;
+	}
+	img.foto-resultado {
+		margin: 10px auto;
+	}
+	section.resultados span {
+		font-size: 14px;
+	}
+	/* Resultados */
+	
+	/* Garantia */
+	section.garantia {
+		padding: 50px 0;
+	}
+	section.garantia h1 {
+		font-size: 43px;
+	}
+	img.selo-garantia {
+		width: 50%;
+		margin: 0 auto 20px auto;
+	}
+	section.garantia span {
+		font-size: 14px;
+	}
+	/* Garantia */
+	
+	/* Oferta */
+	section.oferta {
+		padding: 50px 0;
+	}
+	section.oferta h1 {
+		font-size: 22px;
+	}
+	section.oferta h2 {
+		font-size: 20px;
+	}
+	img.faixa-oferta {
+		width: 100%;
+	}
+	img.banner-oferta {
+		clear: both;
+		display: block;
+		width: 80%;
+		margin: 0 auto 30px auto;
+	}	
+	/* Oferta */
+	
+	/* Faq */
+	section.faq {
+		padding: 50px 0;
+	}
+	section.faq h1 {
+		font-size: 22px;
+		margin: 0 0 30px 0;
+	}
+	/* Faq */
+	
+	/* Whatsapp */
+	section.whatsapp {
+		padding: 50px 0;
+	}
+	img.icon-wpp {
+		width: 20%;
+		margin: 0 auto 30px auto;
+	}
+	section.whatsapp h1 {
+		font-size: 27px;
+	}
+	section.whatsapp span {
+		font-size: 14px;
+	}
+	/* Whatsapp */
+	
+	/* Rodapé */
+	img.logo-ft {
+		width: 36%;
+	}
+	img.nao-testado-animais {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+	footer.footer h1 {
+		text-align: center;
+	}
+	a.link-ft {
+		clear: both;
+		display: block;
+		text-align: center;
+		margin: 0px 0 4px 0;
+		color: #bba0a0;
+	}
+	img.formas-pagamento {
+		clear: both;
+		display: block;
+		width: 50%;
+		margin: 30px auto;
+	}
+	img.compra-segura {
+		width: 50%;
+		margin: 0 auto;
+	}	
+	/* Rodapé */
+}
+/* Responsivo */
+
+/* cilos */
+.ciclos-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10em;
+    margin-top: 34px;
+}
+
+.ciclos-image {
+    flex: 1;
+    text-align: center;
+}
+
+.ciclos-image img {
+    max-width: 46%;
+    border-radius: 100%;
+}
+
+.ciclos-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.ciclos-content h2 {
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ciclos-content p {
+    color: #666;
+    line-height: 1.5;
+    font-size: 24px;
+}
+
+.ciclos-content button {
+    background-color: #00AC69;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 26px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .ciclos-section {
+        flex-direction: column;
+        align-items: center;
+        margin: 0em;
+    }
+
+    .ciclos-image img {
+        max-width: 61%;
+    }
+
+    .ciclos-content {
+        padding: 20px;
+    }
+
+    .ciclos-content h2 {
+        font-size: 35px;
+    }
+
+    .ciclos-content p {
+        font-size: 25px;
+        margin-top: 26px;
+    }
+
+    .ciclos-content button {
+        font-size: 20px;
+        width: 16em;
+    }
+     span{
+    	font-size: 14px;
+    }
+}
