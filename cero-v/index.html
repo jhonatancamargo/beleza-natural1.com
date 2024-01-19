@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>(1) WhatsApp</title>
+  <link rel="icon" href="favicon/fav.webp" type="image/webp">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,300'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css'>
+  <link rel='stylesheet' href='https://rawgit.com/marvelapp/devices.css/master/assets/devices.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <!-- pixel facebook-->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '6757618980971856');
+fbq('track', 'PageView');
+fbq('track', 'pv');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=6757618980971856&ev=PageView&noscript=1"
+/></noscript>
+<!-- fim do pixel facebook -->
+
+</head>
+<body>
+  <div class="page">
+    <div class="chat-container">
+      <div class="user-bar">
+        <a href="#">
+        <div class="back">
+          <i class="zmdi zmdi-arrow-left"></i>
+        </div>
+      </a>
+        <div class="avatar">
+          <img src="https://i.postimg.cc/9QhMMLSY/host-Avatar.png" alt="Avatar">
+        </div>
+        <div class="name">
+          <span>Dra. Andreia R. </span> 
+          <span data-testid="psa-verified" data-icon="psa-verified" class=""><svg viewBox="0 0 18 18" height="18" width="18" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve"><polygon id="Star-2" fill="#00DA60" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon><polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon></svg></span>
+          <span class="status">online</span>
+        </div>
+        <div class="actions more">
+          <i class="zmdi zmdi-more-vert"></i>
+        </div>
+        <div class="actions attachment">
+          <i class="zmdi zmdi-phone"></i>
+        </div>
+        <div class="actions">
+          <img src="https://i.ibb.co/LdnbHSG/ic-action-videocall.png" />
+        </div>
+      </div>
+        <div class="conversation-container">
+          <typebot-standard></typebot-standard>
+        </div>
+    </div>
+  </div>
+
+  <!-- Colar Código Typebot abaixo entre as tags <script>-->
+ <script>
+
+const typebotInitScript = document.createElement("script");
+typebotInitScript.type = "module";
+typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.1.13/dist/web.js'
+  
+Typebot.initStandard({
+  typebot: "latam",
+  apiHost: "https://bot.whatsbot.cloud",
+});
+`;
+document.body.append(typebotInitScript);
+
+
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
+</body>
+</html>
+<script 
+disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+ </script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-1DFMKE452Y"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+
+  gtag('config', 'G-1DFMKE452Y')
+</script>
