@@ -49,7 +49,7 @@ function _0xc21c(){const _0x16d169=['call','6311976dMmNDt','forEach','jDrIk','14
 
 document.addEventListener("DOMContentLoaded", function() {
   /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
-  var SECONDS_TO_DISPLAY = 768;
+  var SECONDS_TO_DISPLAY = 790;
   var CLASS_TO_DISPLAY = ".esconder";
   
   /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
