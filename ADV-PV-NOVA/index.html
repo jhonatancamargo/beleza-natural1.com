@@ -81,7 +81,10 @@ src="https://www.facebook.com/tr?id=1118650336178823&ev=PageView&noscript=1"
 					<h1>Recupere Sua Confiança: E Diga Adeus à Calvície novo Tônico Capilar Promete Melhora Relevante Na Queda de Cabelo</h1>
 					<h3>"Resultados surpreendentes e rápidos do ZeroCalv® deixaram incontáveis homens em todo o Brasil surpreendidos com a eficácia que o produto proporcionou."</h3>
 					<div class="separate-materia">
-						<span><b>Por:</b> CIÊNCIA E SAÚDE<br>Atualizado em 06/03/2024</span>
+						<span id="atualizacao">
+  <b>Por:</b> CIÊNCIA E SAÚDE<br>
+  <span>Atualizado em - </span><span id="dataAnterior"></span>
+</span>
 						<img width="100%" height="auto" src="img/social-icons.jpg" class="social-icons img-fluid">
 					</div>
 					<a href="../PV-NOVA" class="an">
@@ -252,7 +255,7 @@ src="https://www.facebook.com/tr?id=1118650336178823&ev=PageView&noscript=1"
 		<div class="row">
 			
 			<div class="col-md-12 col-lg-12 col-sm-12">
-				<a href="../PV-NOVA" class="an" style="text-decoration: none;"><h1 style="color: #fff; font-size: 15px;">CIÊNCIA E SAÚDE</h1></a>
+				<a href="../PV-NOVA" class="an"><h1 style="color: #fff; font-size: 15px;">CIÊNCIA E SAÚDE</h1></a>
 			</div>
 			
 			<div class="col-md-6 col-lg-6 col-sm-6">
@@ -285,6 +288,27 @@ src="https://www.facebook.com/tr?id=1118650336178823&ev=PageView&noscript=1"
       pageBanner.style.visibility = 'hidden'; /* Tornar oculto */
     }
   });
+</script>
+<script>
+  // Função para obter a data de um dia antes em formato legível
+  function obterDataAnterior() {
+    const umDiaEmMilissegundos = 24 * 60 * 60 * 1000; // Um dia em milissegundos
+    const dataAtual = new Date();
+    const dataAnterior = new Date(dataAtual.getTime() - umDiaEmMilissegundos); // Subtrai um dia da data atual
+    const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    return dataAnterior.toLocaleDateString('pt-BR', options);
+  }
+
+  // Função para atualizar a data no elemento HTML
+  function atualizarDataAnterior() {
+    const dataAnteriorContainer = document.getElementById('dataAnterior');
+    if (dataAnteriorContainer) {
+      dataAnteriorContainer.textContent = obterDataAnterior();
+    }
+  }
+
+  // Atualizar a data de um dia antes
+  atualizarDataAnterior();
 </script>
 
  <script 
