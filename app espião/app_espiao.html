@@ -9,6 +9,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: #c9c8c8;
     }
 
     header {
@@ -16,16 +17,17 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px;
-      background-color: #f0f0f0;
+      background-color: #000000;
+      border-radius: 0% 0% 9% 8%;
     }
 
     .logo img {
-      width: 100px; /* Ajuste conforme necessário */
+      width: 50%; /* Ajuste conforme necessário */
       height: auto; /* Mantém a proporção */
     }
 
     .card img{
-      width: 20%;
+      width: 50%;
     }
 
     .saldo {
@@ -42,12 +44,23 @@
       margin: 10px auto;
       text-align: center; /* Centraliza o conteúdo */
       max-width: 90%; /* Define a largura máxima do card */
+      background: #fff;
     }
 
     @media screen and (min-width: 768px) {
       .card {
         max-width: 50%; /* Define a largura máxima do card para telas maiores */
       }
+      .card img{
+        width: 20%
+      }
+      header {
+    border-radius: 0; /* Remover border-radius em PCs */
+  }
+    }
+    .rec{
+      font-size: 24px;
+      font-weight: 600;
     }
 
     .humano {
@@ -84,6 +97,7 @@
       margin-top: 10px;
       cursor: pointer;
       border-radius: 5px;
+      margin-bottom: 20px;
     }
     .texto_mudavel{
     font-weight: 700;
@@ -256,7 +270,7 @@
       <p style="margin-top: 10px;">Saldo atualizado</p>
       <p>Você recebeu <br>
         <span class="valor">R$ <span id="valor_aleatorio"></span></span></p>
-      <p>Código de identificação da imagem: <span id="codigo_imagem"></span></p>
+      <p>pelo código da: <span class="rec" id="codigo_imagem"></span></p>
     </div>
   </div>
 
@@ -279,8 +293,8 @@
   </audio>
 
   <script>
-    // Simulando um saldo de exemplo
-    let saldoEmReais = 0; // Altere para o saldo real
+    // Verificar se há um saldo armazenado localmente ao carregar a página
+    let saldoEmReais = localStorage.getItem('saldo') ? parseFloat(localStorage.getItem('saldo')) : 0;
 
     // Formatar o saldo para exibição
     const saldoFormatado = saldoEmReais.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -288,17 +302,21 @@
     // Atualizar o elemento HTML com o saldo formatado
     document.getElementById('saldo').textContent = saldoFormatado;
 
-    // Caminhos das imagens do card
-    const imagensCard = ['amazon.png', 'nike.png', 'apple.png'];
+    // Salvar o saldo no armazenamento local
+    function salvarSaldoLocalmente(saldo) {
+      localStorage.setItem('saldo', saldo.toString());
+    }
 
-    // Índice da imagem atual na sequência cíclica
-    let indiceImagemAtual = 0;
+    // Caminho da imagem inicial do card
+    let caminhoImagem = 'apple.png'; // Nome da imagem inicial
 
     // Função para exibir a próxima imagem na sequência cíclica
     function exibirProximaImagem() {
-      const caminhoImagem = imagensCard[indiceImagemAtual];
+      const imagensCard = ['amazon.png', 'nike.png', 'apple.png'];
+      const indiceImagemAtual = imagensCard.indexOf(caminhoImagem);
+      const proximoIndice = (indiceImagemAtual + 1) % imagensCard.length;
+      caminhoImagem = imagensCard[proximoIndice];
       document.getElementById('imagem_card').src = caminhoImagem;
-      indiceImagemAtual = (indiceImagemAtual + 1) % imagensCard.length; // Avança para a próxima imagem ou reinicia
     }
 
     // Exibir a primeira imagem ao carregar a página
@@ -331,6 +349,9 @@
         outroCodigoAleatorio = gerarCodigoAleatorio();
       } while (outroCodigoAleatorio === codigoAleatorio); // Garantir que os códigos não sejam iguais
       document.getElementById('opcoes_container').querySelector(`.opcao:nth-child(${outraOpcao})`).textContent = outroCodigoAleatorio;
+
+      // Exibir o código da imagem como o nome do arquivo da imagem
+      document.getElementById('codigo_imagem').textContent = caminhoImagem.split('.')[0]; // Obtém o nome sem a extensão
     }
 
     // Exibir o código aleatório ao carregar a página
@@ -383,11 +404,12 @@
 
         // Adicionar o valor ao saldo
         saldoEmReais += valorAleatorio;
+        salvarSaldoLocalmente(saldoEmReais); // Salvar o saldo localmente
         const saldoFormatado = saldoEmReais.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         document.getElementById('saldo').textContent = saldoFormatado;
 
         // Exibir o código de identificação da imagem
-        const codigoImagem = document.getElementById('texto_mudavel').textContent;
+        const codigoImagem = caminhoImagem.split('.')[0]; // Obtém o nome sem a extensão
         document.getElementById('codigo_imagem').textContent = codigoImagem;
 
         // Fechar o modal após 5 segundos
@@ -396,7 +418,7 @@
           desselecionarOpcoes(); // Deselecionar opções quando o modal é fechado
           exibirCodigoAleatorio(); // Mudar os códigos quando o modal é fechado
           exibirProximaImagem(); // Exibir a próxima imagem na sequência
-        }, 5000); // 5000 milissegundos = 5 segundos
+        }, 3000); // 5000 milissegundos = 5 segundos
       } else {
         // Se a opção estiver incorreta, exibir o pop-up de erro
         const popupError = document.getElementById('popupError');
