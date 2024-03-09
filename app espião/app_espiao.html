@@ -24,8 +24,15 @@
       height: auto; /* Mantém a proporção */
     }
 
+    .card img{
+      width: 20%;
+    }
+
     .saldo {
       font-size: 20px;
+      background: #00ee0e;
+      padding: 8px;
+      border-radius: 10px;
     }
 
     .card {
@@ -226,15 +233,11 @@
   </header>
 
   <div class="card">
-    <p>Você ganhou um teste grátis!</p>
-  </div>
-
-  <div class="card">
-    <img src="caminho_para_imagem.png" alt="Imagem do segundo card">
-    <p>Vamos ficar rico mano biu</p>
+    <img src="amazon.png" alt="Imagem do card" id="imagem_card">
+    <p>Código gerado com sucesso:</p>
     <p class="texto_mudavel" id="texto_mudavel"></p>
     <div class="humano">
-      <p>Para confirmar que você é um HUMANO escolha abaixo qual desses códigos é o seu que foi gerado!</p>
+      <p>Para confirmar que você é um <b>HUMANO</b> escolha abaixo qual desses códigos é o seu que foi <b>gerado!</b></p>
     </div>
     <div id="opcoes_container">
       <span class="opcao" onclick="selecionarOpcao(1)">Opção 1</span>
@@ -277,7 +280,7 @@
 
   <script>
     // Simulando um saldo de exemplo
-    let saldoEmReais = 1500.75; // Altere para o saldo real
+    let saldoEmReais = 0; // Altere para o saldo real
 
     // Formatar o saldo para exibição
     const saldoFormatado = saldoEmReais.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -285,7 +288,23 @@
     // Atualizar o elemento HTML com o saldo formatado
     document.getElementById('saldo').textContent = saldoFormatado;
 
-    // Função para gerar uma série aleatória de 7 caracteres em maiúsculas
+    // Caminhos das imagens do card
+    const imagensCard = ['amazon.png', 'nike.png', 'apple.png'];
+
+    // Índice da imagem atual na sequência cíclica
+    let indiceImagemAtual = 0;
+
+    // Função para exibir a próxima imagem na sequência cíclica
+    function exibirProximaImagem() {
+      const caminhoImagem = imagensCard[indiceImagemAtual];
+      document.getElementById('imagem_card').src = caminhoImagem;
+      indiceImagemAtual = (indiceImagemAtual + 1) % imagensCard.length; // Avança para a próxima imagem ou reinicia
+    }
+
+    // Exibir a primeira imagem ao carregar a página
+    exibirProximaImagem();
+
+    // Função para gerar um código aleatório
     function gerarCodigoAleatorio() {
       const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
       let codigo = '';
@@ -296,7 +315,7 @@
       return codigo;
     }
 
-    // Função para exibir o código aleatório
+    // Exibir o código aleatório ao carregar a página
     function exibirCodigoAleatorio() {
       const codigoAleatorio = gerarCodigoAleatorio();
       document.getElementById('texto_mudavel').textContent = codigoAleatorio;
@@ -376,6 +395,7 @@
           fecharModal();
           desselecionarOpcoes(); // Deselecionar opções quando o modal é fechado
           exibirCodigoAleatorio(); // Mudar os códigos quando o modal é fechado
+          exibirProximaImagem(); // Exibir a próxima imagem na sequência
         }, 5000); // 5000 milissegundos = 5 segundos
       } else {
         // Se a opção estiver incorreta, exibir o pop-up de erro
