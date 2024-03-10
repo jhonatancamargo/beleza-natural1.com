@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CLick_Píx</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -261,6 +262,31 @@
       color: white;
       font-size: 14px;
     }
+
+    /* Estilo para o popup da carteira */
+    .popup-carteira {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .popup-carteira h2 {
+      margin-bottom: 20px;
+    }
+
+    .chart-container {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -319,6 +345,17 @@
     Seu navegador não suporta o elemento de áudio.
   </audio>
 
+  <!-- Popup da carteira -->
+  <div id="popupCarteira" class="popup-carteira">
+    <span class="close" onclick="fecharPopupCarteira()">&times;</span>
+    <h2>Informações da Carteira</h2>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+    <p>Quantidade de Cliques: <span id="quantidadeCliques">0</span></p>
+    <p>Valor do Saldo: <span id="valorSaldo">R$ 0,00</span></p>
+  </div>
+
   <!-- Ícones do menu -->
   <div class="menu-icons">
     <div>
@@ -326,7 +363,7 @@
       <span>Click e Ganhe</span>
     </div>
     <div>
-      <i class="fas fa-wallet" onclick="irParaSaque()"></i>
+      <i class="fas fa-wallet" onclick="abrirPopupCarteira()"></i>
       <span>Carteira</span>
     </div>
     <div>
@@ -336,6 +373,7 @@
     
   </div>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
   <script>
     // Verificar se há um saldo armazenado localmente ao carregar a página
     let saldoEmReais = localStorage.getItem('saldo') ? parseFloat(localStorage.getItem('saldo')) : 0;
@@ -498,13 +536,73 @@
       });
     }
 
-    // Função para recarregar a página
-    function recarregarPagina() {
-      location.reload();
+    // Função para abrir o pop-up da carteira
+    function abrirPopupCarteira() {
+      // Exibir o pop-up da carteira
+      const popupCarteira = document.getElementById('popupCarteira');
+      popupCarteira.style.display = "block";
+      
+      // Atualizar as informações da carteira
+      atualizarInformacoesCarteira();
+    }
+
+    // Função para fechar o pop-up da carteira
+    function fecharPopupCarteira() {
+      const popupCarteira = document.getElementById('popupCarteira');
+      popupCarteira.style.display = "none";
+    }
+
+    // Função para atualizar as informações da carteira
+    function atualizarInformacoesCarteira() {
+      // Simulação de dados para o gráfico
+      const data = {
+        labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+        datasets: [{
+          label: 'Cliques',
+          data: [12, 19, 3, 5, 2, 3, 7],
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      };
+      
+      // Opções do gráfico
+      const options = {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      };
+      
+      // Renderizar o gráfico
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+      });
+      
+      // Atualizar a quantidade de cliques
+      const quantidadeCliques = data.datasets[0].data.reduce((a, b) => a + b, 0);
+      document.getElementById('quantidadeCliques').textContent = quantidadeCliques;
+      
+      // Atualizar o valor do saldo
+      const valorSaldoFormatado = saldoEmReais.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+      document.getElementById('valorSaldo').textContent = valorSaldoFormatado;
+    }
+
+    // Função para ir para a página inicial
+    function irParaPaginaInicial() {
+      // Aqui você pode implementar a navegação para a página inicial
+      console.log("Indo para a página inicial...");
+    }
+
+    // Função para ir para a página "Click e Ganhe"
+    function irParaClickEGanhe() {
+      // Aqui você pode implementar a navegação para a página "Click e Ganhe"
+      console.log("Indo para a página 'Click e Ganhe'...");
     }
   </script>
-  <script 
-disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
- </script>
 </body>
 </html>
