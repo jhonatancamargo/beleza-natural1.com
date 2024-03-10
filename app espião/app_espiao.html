@@ -396,9 +396,9 @@
     </div>
   </div>
  <div id="popao">
-    <h2>Pop-up de Saldo</h2>
-    <p>O saldo é: <span id="saldoPopup"></span></p>
-    <p>O saldo disponível para uso é: <span id="saldoUsavel"></span></p>
+    <h2>Valor Arecadado</h2>
+    <p>saldo Total: <span id="saldoPopup"></span></p>
+    <p>disponível para Saque: <span id="saldoUsavel"></span></p>
     <button onclick="closePopup()">Fechar</button>
 </div>
 
@@ -433,7 +433,7 @@ function openPopup() {
 </script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-  <script>
+  <script>    
     // Verificar se há um saldo armazenado localmente ao carregar a página
     let saldoEmReais = localStorage.getItem('saldo') ? parseFloat(localStorage.getItem('saldo')) : 0;
 
@@ -516,14 +516,19 @@ function openPopup() {
     }
 
     // Função para enviar
-    function enviar() {
-      // Verificar se alguma opção está selecionada
-      const opcaoSelecionada = document.querySelector('.opcao.selecionada');
-      if (!opcaoSelecionada) {
-        // Se nenhuma opção estiver selecionada, exibir o pop-up de aviso
-        const popupAviso = document.getElementById('popupAviso');
-        popupAviso.style.display = "block";
-        return; // Encerrar a execução da função
+function enviar() {
+  // Incrementar a quantidade de cliques
+  let quantidadeDeCliques = parseInt(document.getElementById('quantidadeCliques').textContent);
+  quantidadeDeCliques++;
+  document.getElementById('quantidadeCliques').textContent = quantidadeDeCliques;
+
+  // Verificar se alguma opção está selecionada
+  const opcaoSelecionada = document.querySelector('.opcao.selecionada');
+  if (!opcaoSelecionada) {
+    // Se nenhuma opção estiver selecionada, exibir o pop-up de aviso
+    const popupAviso = document.getElementById('popupAviso');
+    popupAviso.style.display = "block";
+    return; // Encerrar a execução da função
       }
 
       // Verificar se a opção selecionada é a correta
@@ -618,7 +623,7 @@ function openPopup() {
         labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
         datasets: [{
           label: 'Cliques',
-          data: [12, 19, 3, 5, 2, 3, 7],
+          data: [0, 0, 0, 0, 0, 0, 0],
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
@@ -663,5 +668,8 @@ function openPopup() {
       console.log("Indo para a página 'Click e Ganhe'...");
     }
   </script>
+  <script 
+disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+ </script>
 </body>
 </html>
