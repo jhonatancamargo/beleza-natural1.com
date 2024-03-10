@@ -249,9 +249,17 @@
     }
 
     .menu-icons i {
+      justify-content: center;
+      align-items: center;
       color: white;
       font-size: 24px;
-      cursor: pointer;
+      cursor: pointer!important;
+      display: flex;
+    }
+
+    .menu-icons span {
+      color: white;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -313,9 +321,19 @@
 
   <!-- Ícones do menu -->
   <div class="menu-icons">
-    <i class="fas fa-home" onclick="irParaPaginaInicial()"></i>
-    <i class="fas fa-dollar-sign" onclick="irParaClickEGanhe()"></i>
-    <i class="fas fa-wallet" onclick="irParaSaque()"></i>
+    <div>
+      <i class="fas fa-home" onclick="irParaPaginaInicial()"></i>
+      <span>Click e Ganhe</span>
+    </div>
+    <div>
+      <i class="fas fa-wallet" onclick="irParaSaque()"></i>
+      <span>Carteira</span>
+    </div>
+    <div>
+      <i class="fas fa-dollar-sign" onclick="irParaClickEGanhe()"></i>
+      <span>Saldo Disponivel</span>
+    </div>
+    
   </div>
   
   <script>
