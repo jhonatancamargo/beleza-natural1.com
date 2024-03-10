@@ -287,6 +287,30 @@
     .chart-container {
       margin-bottom: 20px;
     }
+    #popao {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        width: 60%;
+    }
+    #overlay {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
   </style>
 </head>
 <body>
@@ -367,11 +391,46 @@
       <span>Carteira</span>
     </div>
     <div>
-      <i class="fas fa-dollar-sign" onclick="irParaClickEGanhe()"></i>
+      <i class="fas fa-dollar-sign" onclick="openPopup()"></i>
       <span>Saldo Disponivel</span>
     </div>
-    
   </div>
+ <div id="popao">
+    <h2>Pop-up de Saldo</h2>
+    <p>O saldo é: <span id="saldoPopup"></span></p>
+    <p>O saldo disponível para uso é: <span id="saldoUsavel"></span></p>
+    <button onclick="closePopup()">Fechar</button>
+</div>
+
+  <div id="overlay"></div>
+  <script>
+   // Abrir o pop-up
+function openPopup() {
+    // Obtém o saldo exibido na página
+    var saldoAtual = document.getElementById("saldo").textContent;
+    
+    // Atualiza o saldo exibido no popup
+    document.getElementById("saldoPopup").textContent = saldoAtual;
+
+    // Calcula 75% do saldo para o saldo usável
+    var saldoTotal = parseFloat(saldoAtual.replace('R$', '').replace(',', '.'));
+    var saldoUsavel = saldoTotal * 0.75; // 75% do saldo total
+
+    // Atualiza o saldo usável exibido no popup
+    document.getElementById("saldoUsavel").textContent = saldoUsavel.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    // Exibe o popup
+    document.getElementById("popao").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+}
+
+    
+    // Fechar o pop-up
+    function closePopup() {
+        document.getElementById("popao").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
   <script>
