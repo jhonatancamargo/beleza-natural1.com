@@ -235,6 +235,24 @@
       border-radius: 5px;
       text-align: center;
     }
+
+    /* Ícones do menu */
+    .menu-icons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .menu-icons i {
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -294,10 +312,10 @@
   </audio>
 
   <!-- Ícones do menu -->
-  <div style="display: flex; justify-content: space-around; background-color: #000000; padding: 10px;">
-    <span class="fas fa-home fa-2x" style="color: white;"></span>
-    <span class="fas fa-dollar-sign fa-2x" style="color: white;"></span>
-    <span class="fas fa-wallet fa-2x" style="color: white;"></span>
+  <div class="menu-icons">
+    <i class="fas fa-home" onclick="irParaPaginaInicial()"></i>
+    <i class="fas fa-dollar-sign" onclick="irParaClickEGanhe()"></i>
+    <i class="fas fa-wallet" onclick="irParaSaque()"></i>
   </div>
   
   <script>
