@@ -403,6 +403,25 @@
 </div>
 
   <div id="overlay"></div>
+
+  <div id="error-message" style="display: none; text-align: center;">
+    <h1>Erro de Servidor</h1>
+    <p>Lamentamos, mas parece que você não pode acessar esta página a partir do seu dispositivo.</p>
+</div>
+
+<script>
+    // Verificar se é um dispositivo móvel
+    function isMobileDevice() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Redirecionar se for um dispositivo móvel
+    if (isMobileDevice()) {
+        document.getElementById('error-message').style.display = 'block';
+        document.body.innerHTML = '';
+    }
+</script>
+
   <script>
    // Abrir o pop-up
 function openPopup() {
@@ -668,8 +687,6 @@ function enviar() {
       console.log("Indo para a página 'Click e Ganhe'...");
     }
   </script>
-  <script 
-disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
- </script>
+
 </body>
 </html>
