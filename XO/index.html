@@ -19,7 +19,7 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1325068758131243');
+fbq('init', '#');
 fbq('track', 'PageView');
 fbq('track', 'pv');
 </script>
@@ -39,10 +39,10 @@ src="https://www.facebook.com/tr?id=1325068758131243&ev=PageView&noscript=1"
         </div>
       </a>
         <div class="avatar">
-          <img src="https://i.postimg.cc/wjDqv6gV/host-Avatar.jpg" alt="Avatar">
+          <img src="https://i.postimg.cc/J0Mz921s/host-Avatar.jpg" alt="Avatar">
         </div>
         <div class="name">
-          <span>Julia Natura</span>
+          <span>Detetive Patricia</span>
           <span class="status">online</span>
         </div>
         <div class="actions more">
@@ -66,9 +66,12 @@ src="https://www.facebook.com/tr?id=1325068758131243&ev=PageView&noscript=1"
 
 const typebotInitScript = document.createElement("script");
 typebotInitScript.type = "module";
-typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.1/dist/web.js'
+typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.37/dist/web.js'
   
-Typebot.initStandard({ typebot: "xo6920" });
+Typebot.initStandard({
+  typebot: "detetive-patricia",
+  apiHost: "https://app.beleza-natural.fun",
+});
 `;
 document.body.append(typebotInitScript);
 
