@@ -227,26 +227,26 @@
             }
         
             // Configura os parâmetros da URL nos campos
-            window.onload = function() {
-                var queryParams = getQueryParams();
-                if (queryParams.nome) {
-                    document.getElementById('nome').textContent = queryParams.nome;
-                }
-                if (queryParams.cpf) {
-                    document.getElementById('cpf').textContent = queryParams.cpf;
-                }
-                if (queryParams.nasc) {
-                    document.getElementById('nasc').textContent = queryParams.nasc;
-                }
-                if (queryParams.pix) {
-                    document.getElementById('pix').textContent = queryParams.pix;
-                }
-                if (queryParams.ticket) {
-                    document.getElementById('ticket').textContent = queryParams.ticket;
-                }
-                // Atualiza a data e a hora ao carregar a página
-                updateDateTime();
-            };
+           window.onload = function() {
+    var queryParams = getQueryParams();
+    if (queryParams.nome) {
+        document.getElementById('nome').textContent = queryParams.nome;
+    }
+    if (queryParams.cpf) {
+        document.getElementById('cpf').textContent = queryParams.cpf;
+    }
+    if (queryParams.nasc) {
+        document.getElementById('nasc').textContent = queryParams.nasc;
+    }
+    if (queryParams.pix) {
+        document.getElementById('pix').textContent = queryParams.pix;
+    }
+    if (queryParams.ticket) {
+        document.getElementById('ticket').textContent = queryParams.ticket;
+    }
+    // Atualiza a data e a hora ao carregar a página
+    updateDateTime();
+};
         </script>
         
 
