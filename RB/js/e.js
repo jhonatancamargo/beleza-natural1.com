@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var nomes = ["Maria", "Ana", "Joana", "Isabela", "Laura", "Gabriela", "Carolina", "Amanda", "Sophia", "Larissa", "Mariana", "Valentina", "Juliana", "Renata", "Fernanda"];
 
         // Lista de palavras após o nome
-        var palavras = ["Se inscreveu no Bumbum Invejado", "Também adquiriu o Bumbum Invejado", "Acabou de efetuar sua compra"];
+        var palavras = ["Se inscreveu no DESTRAVANDO VENDAS", "Também adquiriu o DESTRAVANDO VENDAS", "Acabou de efetuar sua compra"];
 
         // Agendar o primeiro pop-up para o próximo segundo
         setTimeout(exibirPopup, 1000);
