@@ -49,36 +49,30 @@
             height: calc(100vh - 140px); /* Altura da tela - altura do cabeçalho - altura dos ícones */
             border: none;
         }
-        /* Estilos do modal */
-        .modal {
-            display: none;
+        .popup {
             position: fixed;
-            z-index: 1;
-            left: 0;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999; /* Coloca o pop-up acima de tudo */
         }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
+        .popup-content {
+            background-color: #fff;
             padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
             border-radius: 10px;
+            text-align: center;
         }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
+        .popup-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
     </style>
@@ -106,39 +100,39 @@
         </div>
     </div>
 
-    <!-- Modal para instalação do aplicativo -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="fecharModal()">&times;</span>
-            <p>Instale nosso aplicativo para uma melhor experiência! Clique no botão abaixo para instalar.</p>
-            <button onclick="instalarApp()">Instalar App</button>
+    <!-- Pop-up -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p>Gostaria de adicionar este app à tela inicial do seu celular?</p>
+            <button class="popup-button" onclick="adicionarAtalho()">Adicionar à tela inicial</button>
         </div>
     </div>
 
     <script>
-        // Verifica se o pop-up já foi exibido
-        if (!localStorage.getItem('popupExibido')) {
-            // Se não foi exibido, mostra o pop-up e define o flag
-            var modal = document.getElementById('myModal');
-            modal.style.display = 'block';
-            localStorage.setItem('popupExibido', true);
+        // Função para verificar se o pop-up já foi exibido
+        function verificarExibicaoPopup() {
+            if (!localStorage.getItem('popupExibido')) {
+                // Se o pop-up ainda não foi exibido, exibe-o
+                document.getElementById('popup').style.display = 'flex';
+                // Marca que o pop-up foi exibido
+                localStorage.setItem('popupExibido', 'true');
+            }
         }
 
-        // Função para fechar o modal
-        function fecharModal() {
-            var modal = document.getElementById('myModal');
-            modal.style.display = 'none';
+        // Função para adicionar o atalho na tela inicial
+        function adicionarAtalho() {
+            // Verifica se o navegador suporta a adição de atalhos na tela inicial
+            if ("standalone" in window.navigator && window.navigator.standalone) {
+                alert('Este app já está instalado na tela inicial do seu dispositivo.');
+            } else {
+                alert('Para adicionar este app à tela inicial, encontre a opção "Adicionar à tela inicial" no menu do seu navegador.');
+            }
+            // Fecha o pop-up
+            document.getElementById('popup').style.display = 'none';
         }
 
-        // Função para instalar o aplicativo (simulação)
-        function instalarApp() {
-            alert('Aplicativo instalado!');
-        }
-
-        // Função para trocar o conteúdo do iframe
-        function mostrarPagina(pagina) {
-            document.getElementById('content-frame').src = pagina;
-        }
+        // Chama a função para verificar a exibição do pop-up ao carregar a página
+        window.onload = verificarExibicaoPopup;
     </script>
 </body>
 </html>
