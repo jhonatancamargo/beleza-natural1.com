@@ -49,32 +49,6 @@
             height: calc(100vh - 140px); /* Altura da tela - altura do cabeçalho - altura dos ícones */
             border: none;
         }
-        .popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999; /* Coloca o pop-up acima de tudo */
-        }
-        .popup-content {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .popup-button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -100,39 +74,10 @@
         </div>
     </div>
 
-    <!-- Pop-up -->
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <p>Gostaria de adicionar este app à tela inicial do seu celular?</p>
-            <button class="popup-button" onclick="adicionarAtalho()">Adicionar à tela inicial</button>
-        </div>
-    </div>
-
     <script>
-        // Função para verificar se o pop-up já foi exibido
-        function verificarExibicaoPopup() {
-            if (!localStorage.getItem('popupExibido')) {
-                // Se o pop-up ainda não foi exibido, exibe-o
-                document.getElementById('popup').style.display = 'flex';
-                // Marca que o pop-up foi exibido
-                localStorage.setItem('popupExibido', 'true');
-            }
+        function mostrarPagina(pagina) {
+            document.getElementById('content-frame').src = pagina;
         }
-
-        // Função para adicionar o atalho na tela inicial
-        function adicionarAtalho() {
-            // Verifica se o navegador suporta a adição de atalhos na tela inicial
-            if ("standalone" in window.navigator && window.navigator.standalone) {
-                alert('Este app já está instalado na tela inicial do seu dispositivo.');
-            } else {
-                alert('Para adicionar este app à tela inicial, encontre a opção "Adicionar à tela inicial" no menu do seu navegador.');
-            }
-            // Fecha o pop-up
-            document.getElementById('popup').style.display = 'none';
-        }
-
-        // Chama a função para verificar a exibição do pop-up ao carregar a página
-        window.onload = verificarExibicaoPopup;
     </script>
 </body>
 </html>
