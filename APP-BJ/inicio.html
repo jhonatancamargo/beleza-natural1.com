@@ -83,23 +83,34 @@
             align-items: center;
             backdrop-filter: blur(10px); /* Efeito de desfoque */
         }
+        #videoFrame{
+            height: 476px;
+        }
 
         .popup-content {
+            position: relative;
             background-color: #333;
             padding: 7px;
             border-radius: 10px;
-            max-width: 100%; /* Largura máxima do conteúdo do pop-up */
-            width: auto; /* Largura automática para ajuste responsivo */
+            max-width: 800px; /* Largura máxima desejada */
+            width: 90%; /* Largura em percentual para ajuste responsivo */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de sombra */
+            height: 550px; /* Altura padrão */
         }
 
-        .close {
+                .close {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 16px;
+            right: 15px;
             color: #f00;
             cursor: pointer;
-            font-size: 3rem;
+            font-size: 4rem;
+            background: #000;
+            width: 47px;
+            height: 45px;
+            text-align: center;
+            line-height: 47px;
+            border-radius: 7px;
         }
 
         .navigation {
@@ -126,6 +137,18 @@
             .item {
                 width: calc(50% - 7px); /* Alterado para 50% */
             }
+
+            .popup-content {
+                height: auto; /* Altura automática para dispositivos menores */
+            }
+            #videoFrame {
+                height: 320px; /* Altura automática para dispositivos menores */
+            }
+
+            .navigation {
+                margin-top: 20px;
+            }
+
         }
     </style>
 </head>
@@ -182,7 +205,7 @@
         </div>
     </div>
 
-     <div class="container">
+    <div class="container">
         <div class="header">
             <h1>Treinos 3° Dia</h1>
             <p>Após descansar dois dias do treinos acima vamos Iniciar aqui💪</p>
