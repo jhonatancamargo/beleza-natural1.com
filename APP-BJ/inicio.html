@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotina de treinos</title>
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #FFF;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 9px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1rem;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: calc(25% - 7px); /* Alterado para 33.33% */
+            margin-bottom: 20px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer; /* Adicionado para indicar que o item é clicável */
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .item:hover img {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .item p {
+            padding: 4px;
+            font-size: 14px;
+        }
+
+        /* Estilos do pop-up */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px); /* Efeito de desfoque */
+        }
+
+        .popup-content {
+            background-color: #333;
+            padding: 7px;
+            border-radius: 10px;
+            max-width: 100%; /* Largura máxima do conteúdo do pop-up */
+            width: auto; /* Largura automática para ajuste responsivo */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Efeito de sombra */
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #f00;
+            cursor: pointer;
+            font-size: 3rem;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .navigation button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media screen and (max-width: 600px) {
+            .item {
+                width: calc(50% - 7px); /* Alterado para 50% */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rotina de treinos</h1>
+            <p>Bem-vindo: Sua jornada para um bumbum tonificado começa aqui! 💪</p>
+        </div>
+        <div class="content">
+            <div class="item" onclick="openPopup(0)">
+                <img src="https://i.postimg.cc/Fz2X43Hm/Dia-1.png" alt="Jogo 1">
+                <p>Elevação Pélvica</p>
+            </div>
+            <div class="item" onclick="openPopup(1)">
+                <img src="https://i.postimg.cc/Fz2X43Hm/Dia-1.png" alt="Jogo 2">
+                <p>Elevação 4 apoios com a perna flexionada</p>
+            </div>
+            <div class="item" onclick="openPopup(2)">
+                <img src="https://i.postimg.cc/Fz2X43Hm/Dia-1.png" alt="Jogo 3">
+                <p>Agachamento Ajoelhado</p>
+            </div>
+            <div class="item" onclick="openPopup(3)">
+                <img src="https://i.postimg.cc/Fz2X43Hm/Dia-1.png" alt="Jogo 3">
+                <p>Elevamento Pélvico com joelho flexionado</p>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Treinos 2° Dia</h1>
+            <p>Após descansar dois dias do treinos acima vamos Iniciar aqui💪</p>
+        </div>
+        <div class="content">
+            <div class="item" onclick="openPopup(4)">
+                <img src="https://i.postimg.cc/VsT8nQBT/Dia-2.png" alt="Jogo 1">
+                <p>Ponte com levantamento avançado</p>
+            </div>
+            <div class="item" onclick="openPopup(5)">
+                <img src="https://i.postimg.cc/VsT8nQBT/Dia-2.png" alt="Jogo 2">
+                <p>Agachamento Simples</p>
+            </div>
+            <div class="item" onclick="openPopup(6)">
+                <img src="https://i.postimg.cc/VsT8nQBT/Dia-2.png" alt="Jogo 3">
+                <p>Extensão de quadril com perna estendida</p>
+            </div>
+            <div class="item" onclick="openPopup(7)">
+                <img src="https://i.postimg.cc/VsT8nQBT/Dia-2.png" alt="Jogo 3">
+                <p>Agachamento com joelho flexionado</p>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+    </div>
+
+     <div class="container">
+        <div class="header">
+            <h1>Treinos 3° Dia</h1>
+            <p>Após descansar dois dias do treinos acima vamos Iniciar aqui💪</p>
+        </div>
+        <div class="content">
+            <div class="item" onclick="openPopup(8)">
+                <img src="https://i.postimg.cc/kgyMxY5b/Dia-3.png" alt="Jogo 1">
+                <p>Esmagando o Bumbum deitado</p>
+            </div>
+            <div class="item" onclick="openPopup(9)">
+                <img src="https://i.postimg.cc/kgyMxY5b/Dia-3.png" alt="Jogo 2">
+                <p>Agachamento com salto</p>
+            </div>
+            <div class="item" onclick="openPopup(10)">
+                <img src="https://i.postimg.cc/kgyMxY5b/Dia-3.png" alt="Jogo 3">
+                <p>Abdução no solo</p>
+            </div>
+            <div class="item" onclick="openPopup(11)">
+                <img src="https://i.postimg.cc/kgyMxY5b/Dia-3.png" alt="Jogo 3">
+                <p>Agachamento com levantamento lateral</p>
+            </div>
+            <div class="item" onclick="openPopup(12)">
+                <img src="https://i.postimg.cc/kgyMxY5b/Dia-3.png" alt="Jogo 3">
+                <p>Abdução solo avançado</p>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+    </div>
+
+    <!-- Pop-up -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <iframe id="videoFrame" width="100%" height="315" src="" frameborder="0" allowfullscreen controls="false" allow="autoplay" style="border-radius: 10px;"></iframe>
+            <div class="navigation">
+                <button onclick="previousVideo()">Anterior</button>
+                <button onclick="nextVideo()">Próximo</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var videos = [
+            'https://drive.google.com/file/d/1_bU9YbQJSJoT46EqkQ8xytlrkntGVI9q/preview',
+            'https://drive.google.com/file/d/1-y4luB-CfykSn_LnRQVfT6ehe9LLe8-m/preview',
+            'https://drive.google.com/file/d/12-NDKtY3DwH5Ka5iRKUO-dl9nQb3TMGO/preview',
+            'https://drive.google.com/file/d/1CrPaJi4qU41MZ88W3zXdFbHksid6jozp/preview',
+            //parte-2
+            'https://drive.google.com/file/d/1gS7H4itsKX8L2l3Ok3oJ7r26gD3z70gM/preview',
+            'https://drive.google.com/file/d/1HHNy-bwXjRQi5INz7XszTe7HLCDJXX0k/preview',
+            'https://drive.google.com/file/d/1hDMzdnr-tfkyL1FrJs0E-UKKx3aAF-NS/preview',
+            'https://drive.google.com/file/d/1YhtgpD2Hm5RGhuWkB6SprUwohFtfY5B3/preview',
+            //parte-3
+            'https://drive.google.com/file/d/1WSx1VBm_8C5dVr20qoxOg4zwD1Rb-Cow/preview',
+            'https://drive.google.com/file/d/1kWvCV_elwP1JfIrGD1t7ggO-o7Nh0EJW/preview',
+            'https://drive.google.com/file/d/1d9WgJOzihadsmL-_BZj3HsroCHaOdEAm/preview',
+            'https://drive.google.com/file/d/1DLbaRpOXXyPeHI44Yc5-gTBne8W6jrVh/preview',
+            'https://drive.google.com/file/d/1lDxS6tcchBcSO3-TuasEJSwvcfr3JERB/preview'
+        ];
+        var currentVideoIndex = 0;
+
+        function openPopup(videoIndex) {
+            var popup = document.getElementById('popup');
+            var videoFrame = document.getElementById('videoFrame');
+            currentVideoIndex = videoIndex;
+            videoFrame.src = videos[currentVideoIndex];
+            popup.style.display = 'flex';
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            var videoFrame = document.getElementById('videoFrame');
+            videoFrame.src = '';
+            popup.style.display = 'none';
+        }
+
+        function previousVideo() {
+            currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+            var videoFrame = document.getElementById('videoFrame');
+            videoFrame.src = videos[currentVideoIndex];
+        }
+
+        function nextVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            var videoFrame = document.getElementById('videoFrame');
+            videoFrame.src = videos[currentVideoIndex];
+        }
+    </script>
+</body>
+</html>
