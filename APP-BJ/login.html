@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form id="loginForm">
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <button type="submit">Entrar</button>
+</form>
+
+<script>
+    // Função para carregar a API do Google Sheets e a biblioteca auth2
+    function loadGoogleAPI() {
+        gapi.load('client:auth2', initGoogleClient);
+    }
+
+    // Função para inicializar o cliente da API do Google Sheets
+    function initGoogleClient() {
+        gapi.client.init({
+            apiKey: '1069670603503-9akb84s507091r819ngbnm8j7dfnj2v5.apps.googleusercontent.com',
+            discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+        }).then(function() {
+            console.log('API do Google Sheets inicializada com sucesso!');
+        }).catch(function(error) {
+            console.error('Erro ao inicializar a API do Google Sheets:', error);
+        });
+    }
+
+    // Função para verificar o login
+    function checkLogin() {
+        // Obtém os valores dos campos de entrada
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        // Realiza o login
+        console.log('Verificando login...');
+        // Adicione aqui sua lógica de verificação de login
+    }
+
+    // Adiciona o evento de submit ao formulário de login
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o envio do formulário
+        checkLogin(); // Verifica o login ao clicar em "Entrar"
+    });
+
+    // Carrega a API do Google Sheets e a biblioteca auth2 quando a página é totalmente carregada
+    window.onload = loadGoogleAPI;
+
+</script>
+
+</body>
+</html>
