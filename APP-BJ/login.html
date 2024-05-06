@@ -30,9 +30,10 @@
             [email, password]
         ];
 
-        // Autentica com a API do Google Sheets
+        // Inicializa a API do Google Sheets
         gapi.client.init({
-            apiKey: '1069670603503-9akb84s507091r819ngbnm8j7dfnj2v5.apps.googleusercontent.com',
+            clientId: 'SEU_CLIENT_ID_AQUI',
+            apiKey: 'SUA_API_KEY_AQUI',
             discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
         }).then(function() {
             // Envia os dados para a planilha
