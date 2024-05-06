@@ -20,18 +20,37 @@
             align-items: center;
             justify-content: space-between;
         }
+        .close {
+    font-size: 35px;
+     /* Define uma distância da parte inferior */
+     /* Alinha o botão à direita */
+     /* Adiciona um cursor de ponteiro */
+    padding: 97%;
+}
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo-title h1 {
+            font-size: 20px;
+            font-family: serif;
+            margin-left: 10px;
+        }
         header img {
             width: 90px;
             margin-right: 10px;
         }
-        header h1{
-            font-size: 20px;
-            font-family: serif;
-        }
         .user-info {
-            margin-right: 20px;
+            margin-right: -24px;
             display: flex;
             align-items: center;
+        }
+                /* Estilos para dispositivos maiores */
+        @media screen and (min-width: 769px) {
+            .user-info {
+                margin-right: 40px; /* Aplica a margem negativa no lado direito */
+                margin-top: 0px; /* Reseta o espaçamento no topo */
+            }
         }
         .user-info span {
             margin-right: 10px;
@@ -74,25 +93,54 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgb(103 58 183 / 22%); /* Fundo ofuscado */
             overflow: auto;
+            backdrop-filter: blur(6px); /* Aplica um desfoque de 5px ao fundo */
         }
 
         .modal-content {
             background-color: #fefefe;
             margin: 15% auto;
-            padding: 20px;
+            padding: 40px;
+            border-radius: 10px;
             border: 1px solid #888;
-            width: 80%;
+            width: 70%;
+            max-width: 300px;
+            z-index: 1;
+            left: 0;
+            top: 0;
+             /* Fundo ofuscado */
+        }
+
+        /* Estilo para os campos de email e senha ofuscados */
+        .obscured {
+            font-family: monospace; /* Garante que todos os caracteres ocupem o mesmo espaço */
+            color: transparent; /* Torna os caracteres transparentes */
+            text-shadow: 0 0 0 #000; /* Cria sombra com a mesma cor do texto para manter a largura dos caracteres */
+            border-radius: 6px;
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+            .user-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .user-info span {
+                margin-bottom: 6px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://i.postimg.cc/VvwXRXW0/ema.webp" alt="Logo do Robô de Prêmios Infinitos">
-        <h1>Desafio Bumbum Invejado</h1>
+        <div class="logo-title">
+            <img src="https://i.postimg.cc/VvwXRXW0/ema.webp" alt="Logo do Robô de Prêmios Infinitos">
+            <h1>Desafio Bumbum Invejado</h1>
+        </div>
         <div class="user-info" id="user-info" style="display: none;">
-            <span id="user-email"></span>
+            <span id="user-name"></span>
             <button onclick="logout()">Sair</button>
         </div>
     </header>
@@ -102,13 +150,13 @@
         <!-- Conteúdo do modal -->
         <div class="modal-content">
             <span onclick="fecharModal()" class="close">&times;</span>
-            <h2>Entre com seu email e senha</h2>
+            <h2 style="text-align: center; color: #333;">Entre com seu email e senha</h2>
             <form onsubmit="return verificarCredenciais()">
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
+                <input type="email" id="email" name="email" class="obscured" style="width: 100%; padding: 8px; margin-bottom: 10px;" required><br>
                 <label for="senha">Senha:</label><br>
-                <input type="password" id="senha" name="senha" required><br><br>
-                <button type="submit">Entrar</button>
+                <input type="password" id="senha" name="senha" class="obscured" style="width: 100%; padding: 8px; margin-bottom: 10px;" required><br><br>
+                <button type="submit" style="background-color: #333; color: #fff; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">Entrar</button>
             </form>
         </div>
     </div>
@@ -132,9 +180,9 @@
 
     <script>
         var usuarios = [
-            { email: "jhonatanacamargo2020@gmail.com", senha: "Fr19256920," },
-            { email: "usuario@example.com", senha: "senha2" },
-            { email: "usuario@example.com", senha: "senha3" }
+            { nome: "Jhonatana Camargo", email: "jhonatanacamargo2020@gmail.com", senha: "Fr19256920," },
+            { nome: "Usuário 2", email: "usuario2@example.com", senha: "senha2" },
+            { nome: "Usuário 3", email: "usuario3@example.com", senha: "senha3" }
         ];
 
         var usuarioLogado = false;
@@ -164,7 +212,7 @@
             if (usuarioEncontrado) {
                 usuarioLogado = true;
                 fecharModal(); // Fecha o modal se as credenciais estiverem corretas
-                exibirUserInfo(email);
+                exibirUserInfo(usuarioEncontrado.nome);
                 return false; // Impede o envio do formulário
             } else {
                 alert("Email ou senha incorretos. Tente novamente.");
@@ -173,10 +221,10 @@
         }
 
         // Função para exibir as informações do usuário após o login
-        function exibirUserInfo(email) {
+        function exibirUserInfo(nome) {
             var userInfo = document.getElementById('user-info');
-            var userEmail = document.getElementById('user-email');
-            userEmail.textContent = email;
+            var userName = document.getElementById('user-name');
+            userName.textContent = nome;
             userInfo.style.display = "flex";
         }
 
