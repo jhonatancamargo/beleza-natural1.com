@@ -21,12 +21,9 @@
             justify-content: space-between;
         }
         .close {
-    font-size: 35px;
-     /* Define uma distância da parte inferior */
-     /* Alinha o botão à direita */
-     /* Adiciona um cursor de ponteiro */
-    padding: 97%;
-}
+            font-size: 35px;
+            padding: 97%;
+        }
         .logo-title {
             display: flex;
             align-items: center;
@@ -45,17 +42,14 @@
             display: flex;
             align-items: center;
         }
-                /* Estilos para dispositivos maiores */
         @media screen and (min-width: 769px) {
             .user-info {
-                margin-right: 40px; /* Aplica a margem negativa no lado direito */
-                margin-top: 0px; /* Reseta o espaçamento no topo */
+                margin-right: 40px;
+                margin-top: 0px;
             }
             .modal-content {
-        margin: 13% auto!important; /* Adiciona uma margem superior para espaçamento */
-        
-         /* Aumenta a largura máxima para telas maiores */
-    }
+                margin: 13% auto!important;
+            }
         }
         .user-info span {
             margin-right: 10px;
@@ -81,15 +75,11 @@
             font-size: 12px;
             text-align: center;
         }
-
-
         iframe {
             width: 100%;
-            height: calc(100vh - 140px); /* Altura da tela - altura do cabeçalho - altura dos ícones */
+            height: calc(100vh - 140px);
             border: none;
         }
-
-        /* Estilos para o modal */
         .modal {
             display: none;
             position: fixed;
@@ -98,14 +88,13 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgb(103 58 183 / 22%); /* Fundo ofuscado */
+            background-color: rgb(103 58 183 / 22%);
             overflow: auto;
-            backdrop-filter: blur(6px); /* Aplica um desfoque de 5px ao fundo */
+            backdrop-filter: blur(6px);
         }
-
         .modal-content {
             background-color: #fefefe;
-            margin: 34% auto;
+            margin: 50% auto;
             padding: 40px;
             border-radius: 10px;
             border: 1px solid #888;
@@ -114,18 +103,13 @@
             z-index: 1;
             left: 0;
             top: 0;
-             /* Fundo ofuscado */
         }
-
-        /* Estilo para os campos de email e senha ofuscados */
         .obscured {
-            font-family: monospace; /* Garante que todos os caracteres ocupem o mesmo espaço */
-            color: transparent; /* Torna os caracteres transparentes */
-            text-shadow: 0 0 0 #000; /* Cria sombra com a mesma cor do texto para manter a largura dos caracteres */
+            font-family: monospace;
+            color: transparent;
+            text-shadow: 0 0 0 #000;
             border-radius: 6px;
         }
-
-        /* Estilos para dispositivos móveis */
         @media screen and (max-width: 768px) {
             .user-info {
                 flex-direction: column;
@@ -135,7 +119,11 @@
                 margin-bottom: 6px;
                 text-align: center;
             }
-
+        }
+        .error-message {
+            text-align: center;
+            color: red;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -157,13 +145,14 @@
         <div class="modal-content">
             <span onclick="fecharModal()" class="close">&times;</span>
             <h2 style="text-align: center; color: #333;">Entre com seu email e senha</h2>
-            <form onsubmit="return verificarCredenciais()">
+            <form onsubmit="fecharModal(); return verificarCredenciais()">
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" class="obscured" style="width: 100%; padding: 8px; margin-bottom: 10px;" required><br>
                 <label for="senha">Senha:</label><br>
                 <input type="password" id="senha" name="senha" class="obscured" style="width: 100%; padding: 8px; margin-bottom: 10px;" required><br><br>
                 <button type="submit" style="background-color: #333; color: #fff; padding: 8px 16px; border: none; border-radius: 5px; cursor: pointer;">Entrar</button>
             </form>
+            <div id="error-message" class="error-message" style="display: none;"></div>
         </div>
     </div>
 
@@ -193,40 +182,49 @@
 
         var usuarioLogado = false;
 
-        // Função para mostrar o modal
         function mostrarModal() {
             var modal = document.getElementById('myModal');
             modal.style.display = "block";
         }
 
-        // Função para fechar o modal
         function fecharModal() {
-            var modal = document.getElementById('myModal');
-            modal.style.display = "none";
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+
+            var usuarioEncontrado = usuarios.find(function(usuario) {
+                return usuario.email === email && usuario.senha === senha;
+            });
+
+            if (usuarioEncontrado) {
+                var modal = document.getElementById('myModal');
+                modal.style.display = "none";
+            } else {
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = "Email ou senha incorretos. Tente novamente.";
+                errorMessage.style.display = "block";
+            }
         }
 
-        // Função para verificar as credenciais
         function verificarCredenciais() {
             var email = document.getElementById('email').value;
             var senha = document.getElementById('senha').value;
 
-            // Verifica se as credenciais correspondem a algum usuário
             var usuarioEncontrado = usuarios.find(function(usuario) {
                 return usuario.email === email && usuario.senha === senha;
             });
 
             if (usuarioEncontrado) {
                 usuarioLogado = true;
-                fecharModal(); // Fecha o modal se as credenciais estiverem corretas
                 exibirUserInfo(usuarioEncontrado.nome);
-                return false; // Impede o envio do formulário
+                return false;
             } else {
-                alert("Email ou senha incorretos. Tente novamente.");
-                return false; // Impede o envio do formulário
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = "Email ou senha incorretos. Tente novamente.";
+                errorMessage.style.display = "block";
+                return false;
             }
         }
 
-        // Função para exibir as informações do usuário após o login
         function exibirUserInfo(nome) {
             var userInfo = document.getElementById('user-info');
             var userName = document.getElementById('user-name');
@@ -234,20 +232,17 @@
             userInfo.style.display = "flex";
         }
 
-        // Função para logout
         function logout() {
             usuarioLogado = false;
             var userInfo = document.getElementById('user-info');
             userInfo.style.display = "none";
-            mostrarModal(); // Mostra o modal novamente ao clicar em sair
+            mostrarModal();
         }
 
-        // Exibir o modal ao carregar a página
         window.onload = function() {
             mostrarModal();
         };
 
-        // Função para mudar o conteúdo do iframe
         function mostrarPagina(pagina) {
             document.getElementById('content-frame').src = pagina;
         }
