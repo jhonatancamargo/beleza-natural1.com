@@ -12,6 +12,8 @@
             margin: 0;
             padding: 0;
         }
+        
+
         header {
             background-color: #333;
             color: #fff;
@@ -143,7 +145,7 @@
     <div id="myModal" class="modal">
         <!-- Conteúdo do modal -->
         <div class="modal-content">
-            <span onclick="fecharModal()" class="close">&times;</span>
+            <!-- Botão de fechar removido -->
             <h2 style="text-align: center; color: #333;">Entre com seu email e senha</h2>
             <form onsubmit="fecharModal(); return verificarCredenciais()">
                 <label for="email">Email:</label><br>
@@ -195,11 +197,13 @@
                 return usuario.email === email && usuario.senha === senha;
             });
 
+            var errorMessage = document.getElementById('error-message'); // Movido para fora do bloco if/else
+
             if (usuarioEncontrado) {
                 var modal = document.getElementById('myModal');
                 modal.style.display = "none";
+                errorMessage.style.display = "none"; // Esconder a mensagem de erro
             } else {
-                var errorMessage = document.getElementById('error-message');
                 errorMessage.textContent = "Email ou senha incorretos. Tente novamente.";
                 errorMessage.style.display = "block";
             }
