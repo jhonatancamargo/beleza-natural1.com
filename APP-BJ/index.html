@@ -18,6 +18,7 @@
             padding: 10px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
         header img {
             width: 90px;
@@ -26,6 +27,14 @@
         header h1{
             font-size: 20px;
             font-family: serif;
+        }
+        .user-info {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .user-info span {
+            margin-right: 10px;
         }
         .task-icons {
             position: fixed;
@@ -55,13 +64,54 @@
             height: calc(100vh - 140px); /* Altura da tela - altura do cabeçalho - altura dos ícones */
             border: none;
         }
+
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="https://i.postimg.cc/VvwXRXW0/ema.webp" alt="Logo do Robô de Prêmios Infinitos">
         <h1>Desafio Bumbum Invejado</h1>
+        <div class="user-info" id="user-info" style="display: none;">
+            <span id="user-email"></span>
+            <button onclick="logout()">Sair</button>
+        </div>
     </header>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <!-- Conteúdo do modal -->
+        <div class="modal-content">
+            <span onclick="fecharModal()" class="close">&times;</span>
+            <h2>Entre com seu email e senha</h2>
+            <form onsubmit="return verificarCredenciais()">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" required><br><br>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
 
     <iframe id="content-frame" src="inicio.html"></iframe>
 
@@ -81,6 +131,69 @@
     </div>
 
     <script>
+        var usuarios = [
+            { email: "usuario1@example.com", senha: "senha1" },
+            { email: "usuario2@example.com", senha: "senha2" },
+            { email: "usuario3@example.com", senha: "senha3" }
+        ];
+
+        var usuarioLogado = false;
+
+        // Função para mostrar o modal
+        function mostrarModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "block";
+        }
+
+        // Função para fechar o modal
+        function fecharModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = "none";
+        }
+
+        // Função para verificar as credenciais
+        function verificarCredenciais() {
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+
+            // Verifica se as credenciais correspondem a algum usuário
+            var usuarioEncontrado = usuarios.find(function(usuario) {
+                return usuario.email === email && usuario.senha === senha;
+            });
+
+            if (usuarioEncontrado) {
+                usuarioLogado = true;
+                fecharModal(); // Fecha o modal se as credenciais estiverem corretas
+                exibirUserInfo(email);
+                return false; // Impede o envio do formulário
+            } else {
+                alert("Email ou senha incorretos. Tente novamente.");
+                return false; // Impede o envio do formulário
+            }
+        }
+
+        // Função para exibir as informações do usuário após o login
+        function exibirUserInfo(email) {
+            var userInfo = document.getElementById('user-info');
+            var userEmail = document.getElementById('user-email');
+            userEmail.textContent = email;
+            userInfo.style.display = "flex";
+        }
+
+        // Função para logout
+        function logout() {
+            usuarioLogado = false;
+            var userInfo = document.getElementById('user-info');
+            userInfo.style.display = "none";
+            mostrarModal(); // Mostra o modal novamente ao clicar em sair
+        }
+
+        // Exibir o modal ao carregar a página
+        window.onload = function() {
+            mostrarModal();
+        };
+
+        // Função para mudar o conteúdo do iframe
         function mostrarPagina(pagina) {
             document.getElementById('content-frame').src = pagina;
         }
