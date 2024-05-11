@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Boost</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .h4, h4 {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+@media only screen and (max-width: 768px) {
+    .h4, h4 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .princ img {
+        width: 100%;
+        height: auto; /* Garante que a proporção da imagem seja mantida */
+    }
+
+}
+    .green-arrow,aa
+    .offer-text,
+    .price-box {
+      animation: fadeInUp 1s ease-out;
+    }
+    .green-arrow {
+      display: block;
+      margin: 20px auto;
+      width: 100px;
+    }
+    .offer-text {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .price-box {
+      border: 1px solid #153590;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%; /* Definindo uma altura de 100% para os cards */
+      align-items: center;
+    }
+    .price-box:hover {
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      transform: translate3d(0, -5px, 0);
+    }
+    .offer-text h2{
+      color: #fa0000;
+      font-weight: 700;
+    }
+    .price-box h2 {
+      font-size: 24px;
+      color: #FF530D;
+    }
+    .price-box h3 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .price-box img {
+      margin-top: 0px;
+      width: 68%;
+      padding-bottom: 2px;
+    }
+    .pt {
+      width: 113%!important;
+    }
+    .price-per-bottle {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .money-saving {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .order_link {
+      display: block;
+      margin-top: 20px;
+    }
+    .pack-cards {
+      display: block;
+      margin-top: 10px!important;
+      margin-bottom: 20px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .price-data {
+      margin-top: -9px;
+    }
+    .price-data s {
+    text-decoration: line-through; /* Adiciona a linha de risco */
+    text-decoration-color: red; /* Define a cor vermelha para a linha de risco */
+}
+.order_link button {
+    color: #000000 !important;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #fff700, #ff8100fc);
+    border: none;
+    transition: box-shadow 0.3s ease; /* Adicionando uma transição para o efeito de sombra */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3); /* Adicionando uma sombra para simular o efeito de levantar */
+}
+
+.order_link button:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Aumentando a sombra para simular o efeito de levantar mais */
+}
+
+
+
+.col-md-4, .col-md-6{
+    padding-bottom: 10px;
+}
+.princ {
+    text-align: center;
+}
+
+.princ img {
+    display: inline-block; /* Garante que as imagens sejam exibidas como blocos inline */
+    vertical-align: middle; /* Alinha as imagens verticalmente no centro */
+}
+.container h2, h1{
+  text-align: center;
+}
+    .price-large{font-size: 45px;font-weight: 800;}
+    .per-bottle-span{font-size: 13px;position: absolute;padding-left: 6px;text-align: left;line-height: 1.2;}
+    /* Removendo a regra que foi adicionada anteriormente */
+    /* .row {
+      align-items: stretch;
+    } */
+     .cr2 .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      width: 50%; /* Ajusta a largura apenas do card dentro da classe "princ" */
+      margin: 0 auto; /* Centraliza o card na página */
+    }
+    .cr2 .row{
+     align-items: center;
+    }
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.titulo-principal {
+      color: #333; /* Cor do texto */
+      font-size: 24px; /* Tamanho da fonte */
+      text-align: center; /* Alinhamento do texto */
+      font-family: The main method to elevate your sex life goals;
+    }
+
+    /* Estilos para o parágrafo */
+    .paragrafo {
+      color: #f00; /* Cor do texto */
+      font-size: 35px; /* Tamanho da fonte */
+      
+       /* Alinhamento do texto */
+      font-weight: 700;
+      font-family: zuume;
+    }
+
+    /* Estilos para o subtítulo */
+    .subtitulo {
+      color: #5b4b4b; /* Cor do texto */
+      font-size: 29px; /* Tamanho da fonte */
+      text-align: center; /* Alinhamento do texto */
+      padding-bottom: 4rem;
+    }
+hr {
+      border: none;
+      border-radius: 33%;
+      height: 3px;
+      background-color: #333; /* Cor do traço */
+      margin: 20px auto; /* Centraliza o traço e define o espaçamento acima e abaixo */
+      max-width: 8%; /* Largura máxima do traço */
+    }
+    .cr2{
+          padding-top: 4rem;
+          padding-bottom: 2rem;
+          background: repeating-linear-gradient(330deg, #252525, #252525 2px, #000 2px, #000 4px);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <!--img src="/nw-images/green-arrow.webp?v2" alt="img" class="img-responsive center-block green-arrow"-->
+        <div class="offer-text">
+          <h2>Limited Time Offer!</h2>
+          <h4>Take advantage of <b>InnovaBoost</b>'s special offer available for a limited time, get yours before stock runs out</h4>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-4 col-sm-6">
+        <div class="price-box">
+          <h2>Basic</h2>
+          <h3>30 Days, 1 Bottle</h3>
+          <img class="pt" src="https://i.postimg.cc/k4ST32GP/encapsulado-inova-semfundo.png" class="img-responsive center-block pro-img" alt="img">
+          <div class="price-per-bottle">
+            <span class="price-large">$69</span>
+            <span class="per-bottle-span">Per <br> Bottle</span>
+          </div>
+          <div class="money-saving"></div>
+          <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red1&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
+
+            <div class="order_link">
+                 <button class="btn btn-primary">🛒 Add To Cart</button>
+             </div>
+            </a>
+
+          <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
+          <div class="price-data">
+            TOTAL: <s>$179</s>
+            <span style="font-weight: bold;">$69</span>
+            <br>
+            <h5 class="pro-Guarantee">180 Days, 6 Bottle</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="price-box">
+          <h2>Best Value</h2>
+          <h3>180 Days, 6 Bottle</h3>
+          <img class="pt"  src="https://i.postimg.cc/ryfRWfF5/Design-sem-nome-3.png" class="img-responsive center-block pro-img" alt="img">
+          <div class="price-per-bottle">
+            <span class="price-large">$49</span>
+            <span class="per-bottle-span">Per <br> Bottle</span>
+          </div>
+          <div class="money-saving">YOU SAVE $1074!</div>
+          <img src="https://myredtonic.com/nw-images/free-offer-6-nw.png" alt="img" class="img-responsive center-block free-offer">
+          <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red6&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
+
+            <div class="order_link">
+                 <button class="btn btn-primary">🛒 Add To Cart</button>
+             </div>
+          </a>
+
+          <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
+          <div class="price-data">
+            TOTAL: <s>$1782</s>
+            <span style="font-weight: bold;">$294</span>
+            <br>
+            <h5 class="pro-Guarantee">180 Days, 6 Bottle</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="price-box">
+          <h2>Most Popular</h2>
+          <h3>90 Days, 3 Bottle</h3>
+          <img  class="pt" src="https://i.postimg.cc/MGpGFBsX/Design-sem-nome-2.png" class="img-responsive center-block pro-img" alt="img">
+          <div class="price-per-bottle">
+            <span class="price-large">$59</span>
+            <span class="per-bottle-span">Per <br> Bottle</span>
+          </div>
+          <div class="money-saving">YOU SAVE $537!</div>
+          <img src="https://myredtonic.com/nw-images/free-offer-6-nw.png" alt="img" class="img-responsive center-block free-offer">
+          <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red3&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
+
+            <div class="order_link">
+                 <button class="btn btn-primary">🛒 Add To Cart</button>
+             </div>
+          </a>
+
+          <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
+          <div class="price-data">
+             TOTAL: <s>$891</s>
+            <span style="font-weight: bold;">$177</span>
+            <br>
+            <h5 class="pro-Guarantee">90 Days, 3 Bottle</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="princ">
+    <img src="https://i.postimg.cc/0QL07xsX/image1-removebg-preview.png">
+     <h1 class="titulo-principal">InnovaBoost</h1>
+        <hr>
+        <p class="paragrafo">THE MAIN METHOD TO ELEVATE YOU SEX LIFE GOALS
+</p>
+        <h2 class="subtitulo">Always prepared for the moment.</h2>
+  </div>
+
+    <div class="cr2">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="card-text">At the beginning of my journey developing the formula that would become the #1 formula for supporting your sex life goals, <b>InnovaBoost</b>, I never imagined that the day would come when I would help thousands of men around the world achieve their goals of enriching their lives through a natural and long-lasting male enhancement method.</p>
+           <p>
+           It's individuals like you who make all the effort and years dedicated to research and experimentation worth it, and my hope is that you get the most out of <b>InnovaBoost</b> while I keep production affordable.
+           </p>
+          </div>
+          <div class="col-md-6">
+            <img src="https://i.postimg.cc/k4ST32GP/encapsulado-inova-semfundo.png" class="card-img" alt="Imagem do Produto">
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+  <p></p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
