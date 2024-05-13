@@ -1,0 +1,523 @@
+@keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .h4,
+    h4 {
+      padding-left: 20%;
+      padding-right: 20%;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    @media (min-width: 768px) {
+    .col-md-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 46%;
+        max-width: 46%;
+    }
+  }
+    
+    
+    @media only screen and (max-width: 768px) {
+      .h4,
+      h4 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .princ img {
+        width: 50%;
+        height: auto;
+      }
+      .cr2 .card {
+        width: 98% !important;
+      }
+      .titulo-principal {
+        padding-top: 22px;
+      }
+      .paragrafo {
+        font-size: 22px!important;
+        width: auto!important;
+      }
+      .subtitulo {
+        font-size: 13px!important;
+      }
+      hr {
+        max-width: 57%!important;
+      }
+      .testimonial {
+        text-align: center!important;
+      }
+      .col-sm-4 {
+        flex: none!important;
+      }
+      .testimonial {
+        width: auto !important;
+      }
+      .s-5 {
+    max-width: none!important;
+    margin-left: auto!important;
+      }
+      .mb-3 {
+    
+    width: 90% !important;
+    height: auto !important;
+      }
+      .mb-0 {
+    font-size: 15px!important;
+}
+.footer-disclaimer {
+          width: auto !important;
+}
+.img-ul {
+    width: 100%!important;
+    margin-top: -6rem;
+}
+    }
+    
+    .col-sm-4 {
+      flex: 0 0 21.333333%;
+    }
+    
+    .green-arrow,
+    .offer-text,
+    .price-box {
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .green-arrow {
+      display: block;
+      margin: 20px auto;
+      width: 100px;
+    }
+    
+    .offer-text {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .price-box {
+      border: 1px solid #153590;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+      background-color: #ffffff;
+    }
+    
+    .price-box:hover {
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      transform: translate3d(0, -5px, 0);
+    }
+    
+    .offer-text h2 {
+      color: #fa0000;
+      font-weight: 700;
+    }
+    
+    .price-box h2 {
+      font-size: 24px;
+      color: #FF530D;
+    }
+    
+    .price-box h3 {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    
+    .price-box img {
+      margin-top: 0px;
+      width: 68%;
+      padding-bottom: 2px;
+    }
+    
+    .pt {
+      width: 113%!important;
+    }
+    
+    .price-per-bottle {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    
+    .money-saving {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    
+    .order_link {
+      display: block;
+      margin-top: 20px;
+    }
+    
+    .pack-cards {
+      display: block;
+      margin-top: 10px!important;
+      margin-bottom: 20px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .price-data {
+      margin-top: -9px;
+    }
+    
+    .price-data s {
+      text-decoration: line-through;
+      text-decoration-color: red;
+    }
+    
+    .order_link button {
+      color: #000000 !important;
+      font-weight: 700;
+      font-size: 23px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background-image: linear-gradient(to bottom, #fff700, #ff8100fc);
+      border: none;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .order_link button:hover {
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    }
+    
+    .col-md-4,
+    .col-md-6 {
+      padding-bottom: 30px;
+    }
+    .lad{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    
+    }
+    
+    .princ {
+      text-align: center;
+      padding-bottom: 19px;
+    }
+    
+    .princ img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    .container h2,
+    h1 {
+      text-align: center;
+    }
+    
+    .price-large {
+      font-size: 45px;
+      font-weight: 800;
+    }
+    
+    .per-bottle-span {
+      font-size: 13px;
+      position: absolute;
+      padding-left: 6px;
+      text-align: left;
+      line-height: 1.2;
+    }
+    
+    .cr2 .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      width: 50%;
+      margin: 0 auto;
+    }
+    
+    .cr2 .row {
+      align-items: center;
+
+    }
+    
+    .card-title {
+      font-size: 1.5rem;
+      color: #333;
+    }
+    
+    .card-text {
+      color: #666;
+      text-align: left;
+    }
+    .car-h2{
+    text-align: left!important;
+    }
+    
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+    
+    .card-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .titulo-principal {
+      color: #333;
+      font-size: 24px;
+      text-align: center;
+      font-family: The main method to elevate your sex life goals;
+      padding-top: 2%;
+    }
+    
+    .paragrafo {
+      color: #f00;
+      font-size: 34px;
+      font-weight: 700;
+      font-family: zuume;
+      width: 50%;
+      margin: auto;
+    }
+    
+    .subtitulo {
+      color: #5b4b4b;
+      font-size: 19px;
+      text-align: center;
+      padding-bottom: 2%;
+    }
+    
+    hr {
+      border: none;
+      border-radius: 33%;
+      height: 3px;
+      background-color: #333;
+      margin: 20px auto;
+      max-width: 8%;
+      margin-bottom: 2rem;
+    }
+    
+    .cr2 {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      background: repeating-linear-gradient(330deg, #252525, #252525 2px, #000 2px, #000 4px);
+    }
+    .cr3 {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    background: repeating-linear-gradient(330deg, #f1f0f4, #f1f0f4 2px, #fff 2px, #fff 4px);
+}
+    
+    .hr-depimento {
+      border: none;
+      border-radius: 33%;
+      height: 3px;
+      background-color: #333;
+      margin: 2rem auto;
+      max-width: 75%;
+    }
+    
+    .text-center {
+      justify-content: center;
+    }
+    
+    .testimonial {
+      display: inline-block;
+      text-align: left;
+      margin: 0 auto;
+      width: 154%;
+    }
+    
+    .testimonial-img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+    
+    .testimonial-name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial-verified {
+      font-weight: bold;
+    }
+
+    /* custon img lado lado*/
+
+    .custom-image {
+  width: 100%; /* Defina a largura desejada para as imagens */
+  margin-bottom: auto; /* Adicione margem inferior entre as imagens */
+  border-radius: 6px;
+}
+
+.custom-image-column {
+  /* Adicione espaçamento entre as imagens */
+}
+
+.custom-image-column .row {
+  margin-left: -10px; /* Compensa o espaçamento padrão entre as colunas */
+  margin-right: -10px; /* Compensa o espaçamento padrão entre as colunas */
+}
+
+.custom-background-image {
+  background: repeating-linear-gradient(330deg, #252525, #252525 2px, #000 2px, #000 4px);
+  border-radius: 7px;
+  padding-top: 15px;
+}
+
+/* custon img lado lado*/
+
+/* img abaixo do dep */
+ .custom-image-column {
+    margin-bottom: 15px; /* Adiciona margem inferior entre as linhas */
+  }
+
+  .custom-image-column .col-md-6 {
+    margin-bottom: 15px;
+    padding-left: 10px; /* Adiciona espaçamento interno para compensar o espaçamento negativo da margem */
+    padding-right: 10px; /* Adiciona espaçamento interno para compensar o espaçamento negativo da margem */
+    padding-bottom: 10px; /* Adiciona espaço abaixo de cada imagem */
+    margin-right: 20px; /* Adiciona margem direita para criar espaçamento entre as colunas */
+  }
+
+  .custom-image {
+    width: 100%; /* Define a largura total da imagem */
+    border-radius: 7px; /* Adiciona borda arredondada */
+  }
+
+  .mb-3 {
+    margin-bottom: 15px; /* Adiciona margem inferior de 15px */
+    max-width: none; /* Remover a limitação de largura */
+    width: 100%!important; /* Permitir que a imagem mantenha sua largura original */
+  }
+  .s-5{
+    max-width: 133px;
+    margin-left: -58px;
+  }
+  .img-fluid {
+    border-radius: 5px;
+}
+  /* img abaixo do dep */
+.font-third {
+    font-family: var(--bs-font-third) !important;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+}
+.text-black {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+}
+.text-start {
+    text-align: left !important;
+}
+.fw-bold {
+    font-weight: 700 !important;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+    font-size: 27px;
+}
+.small, small {
+    font-size: .700em!important;
+}
+.buy-car img.car, .device-item img {
+    float: left;
+  }
+  .buy-car .car-text {
+    float: left;
+    width: calc(100% - 70px);
+    margin-left: 20px;
+}
+.text-end {
+    text-align: right !important;
+}
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.bg-white {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.color2 {
+    color: var(--bs-gray-800);
+}
+.img-ul{
+  width: 33%;
+}
+
+/* footer*/
+.black-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-menu li:last-child {
+    margin-right: 0;
+}
+
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+.footer-disclaimer {
+    text-align: center;
+    font-size: 11px;
+    width: 36rem;
+    margin: auto;
+    padding-top: 23px;
+}
+/* footer*/
+.cr4{
+  padding-top: 3rem
+}
+h2 {
+    font-size: 1.5rem;
+}

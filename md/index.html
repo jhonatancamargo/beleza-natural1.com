@@ -1,241 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Boost</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .h4, h4 {
-    padding-left: 20%;
-    padding-right: 20%;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-@media only screen and (max-width: 768px) {
-    .h4, h4 {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .princ img {
-        width: 100%;
-        height: auto; /* Garante que a proporção da imagem seja mantida */
-    }
-
-}
-    .green-arrow,aa
-    .offer-text,
-    .price-box {
-      animation: fadeInUp 1s ease-out;
-    }
-    .green-arrow {
-      display: block;
-      margin: 20px auto;
-      width: 100px;
-    }
-    .offer-text {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .price-box {
-      border: 1px solid #153590;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      transition: box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%; /* Definindo uma altura de 100% para os cards */
-      align-items: center;
-    }
-    .price-box:hover {
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-      transform: translate3d(0, -5px, 0);
-    }
-    .offer-text h2{
-      color: #fa0000;
-      font-weight: 700;
-    }
-    .price-box h2 {
-      font-size: 24px;
-      color: #FF530D;
-    }
-    .price-box h3 {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-    .price-box img {
-      margin-top: 0px;
-      width: 68%;
-      padding-bottom: 2px;
-    }
-    .pt {
-      width: 113%!important;
-    }
-    .price-per-bottle {
-      font-size: 18px;
-      margin-top: 20px;
-    }
-    .money-saving {
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    .order_link {
-      display: block;
-      margin-top: 20px;
-    }
-    .pack-cards {
-      display: block;
-      margin-top: 10px!important;
-      margin-bottom: 20px;
-      width: 200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .price-data {
-      margin-top: -9px;
-    }
-    .price-data s {
-    text-decoration: line-through; /* Adiciona a linha de risco */
-    text-decoration-color: red; /* Define a cor vermelha para a linha de risco */
-}
-.order_link button {
-    color: #000000 !important;
-    font-weight: 700;
-    font-size: 23px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-image: linear-gradient(to bottom, #fff700, #ff8100fc);
-    border: none;
-    transition: box-shadow 0.3s ease; /* Adicionando uma transição para o efeito de sombra */
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3); /* Adicionando uma sombra para simular o efeito de levantar */
-}
-
-.order_link button:hover {
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Aumentando a sombra para simular o efeito de levantar mais */
-}
-
-
-
-.col-md-4, .col-md-6{
-    padding-bottom: 10px;
-}
-.princ {
-    text-align: center;
-}
-
-.princ img {
-    display: inline-block; /* Garante que as imagens sejam exibidas como blocos inline */
-    vertical-align: middle; /* Alinha as imagens verticalmente no centro */
-}
-.container h2, h1{
-  text-align: center;
-}
-    .price-large{font-size: 45px;font-weight: 800;}
-    .per-bottle-span{font-size: 13px;position: absolute;padding-left: 6px;text-align: left;line-height: 1.2;}
-    /* Removendo a regra que foi adicionada anteriormente */
-    /* .row {
-      align-items: stretch;
-    } */
-     .cr2 .card {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      width: 50%; /* Ajusta a largura apenas do card dentro da classe "princ" */
-      margin: 0 auto; /* Centraliza o card na página */
-    }
-    .cr2 .row{
-     align-items: center;
-    }
-
-.card-title {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.card-text {
-  color: #666;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
-.card-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-.titulo-principal {
-      color: #333; /* Cor do texto */
-      font-size: 24px; /* Tamanho da fonte */
-      text-align: center; /* Alinhamento do texto */
-      font-family: The main method to elevate your sex life goals;
-    }
-
-    /* Estilos para o parágrafo */
-    .paragrafo {
-      color: #f00; /* Cor do texto */
-      font-size: 35px; /* Tamanho da fonte */
-      
-       /* Alinhamento do texto */
-      font-weight: 700;
-      font-family: zuume;
-    }
-
-    /* Estilos para o subtítulo */
-    .subtitulo {
-      color: #5b4b4b; /* Cor do texto */
-      font-size: 29px; /* Tamanho da fonte */
-      text-align: center; /* Alinhamento do texto */
-      padding-bottom: 4rem;
-    }
-hr {
-      border: none;
-      border-radius: 33%;
-      height: 3px;
-      background-color: #333; /* Cor do traço */
-      margin: 20px auto; /* Centraliza o traço e define o espaçamento acima e abaixo */
-      max-width: 8%; /* Largura máxima do traço */
-    }
-    .cr2{
-          padding-top: 4rem;
-          padding-bottom: 2rem;
-          background: repeating-linear-gradient(330deg, #252525, #252525 2px, #000 2px, #000 4px);
-    }
-
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
+
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <!--img src="/nw-images/green-arrow.webp?v2" alt="img" class="img-responsive center-block green-arrow"-->
         <div class="offer-text">
           <h2>Limited Time Offer!</h2>
           <h4>Take advantage of <b>InnovaBoost</b>'s special offer available for a limited time, get yours before stock runs out</h4>
         </div>
       </div>
     </div>
+
     <div class="row justify-content-center text-center">
+      <!-- Coluna 1 -->
       <div class="col-md-4 col-sm-6">
+        <!-- Box de Preço -->
         <div class="price-box">
           <h2>Basic</h2>
           <h3>30 Days, 1 Bottle</h3>
@@ -246,12 +35,10 @@ hr {
           </div>
           <div class="money-saving"></div>
           <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red1&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
-
             <div class="order_link">
-                 <button class="btn btn-primary">🛒 Add To Cart</button>
-             </div>
-            </a>
-
+              <button class="btn btn-primary">🛒 Add To Cart</button>
+            </div>
+          </a>
           <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
           <div class="price-data">
             TOTAL: <s>$179</s>
@@ -261,11 +48,14 @@ hr {
           </div>
         </div>
       </div>
+
+      <!-- Coluna 2 -->
       <div class="col-md-4 col-sm-6">
+        <!-- Box de Preço -->
         <div class="price-box">
           <h2>Best Value</h2>
           <h3>180 Days, 6 Bottle</h3>
-          <img class="pt"  src="https://i.postimg.cc/ryfRWfF5/Design-sem-nome-3.png" class="img-responsive center-block pro-img" alt="img">
+          <img class="pt" src="https://i.postimg.cc/ryfRWfF5/Design-sem-nome-3.png" class="img-responsive center-block pro-img" alt="img">
           <div class="price-per-bottle">
             <span class="price-large">$49</span>
             <span class="per-bottle-span">Per <br> Bottle</span>
@@ -273,12 +63,10 @@ hr {
           <div class="money-saving">YOU SAVE $1074!</div>
           <img src="https://myredtonic.com/nw-images/free-offer-6-nw.png" alt="img" class="img-responsive center-block free-offer">
           <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red6&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
-
             <div class="order_link">
-                 <button class="btn btn-primary">🛒 Add To Cart</button>
-             </div>
+              <button class="btn btn-primary">🛒 Add To Cart</button>
+            </div>
           </a>
-
           <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
           <div class="price-data">
             TOTAL: <s>$1782</s>
@@ -288,11 +76,14 @@ hr {
           </div>
         </div>
       </div>
+
+      <!-- Coluna 3 -->
       <div class="col-md-4 col-sm-6">
+        <!-- Box de Preço -->
         <div class="price-box">
           <h2>Most Popular</h2>
           <h3>90 Days, 3 Bottle</h3>
-          <img  class="pt" src="https://i.postimg.cc/MGpGFBsX/Design-sem-nome-2.png" class="img-responsive center-block pro-img" alt="img">
+          <img class="pt" src="https://i.postimg.cc/MGpGFBsX/Design-sem-nome-2.png" class="img-responsive center-block pro-img" alt="img">
           <div class="price-per-bottle">
             <span class="price-large">$59</span>
             <span class="per-bottle-span">Per <br> Bottle</span>
@@ -300,15 +91,13 @@ hr {
           <div class="money-saving">YOU SAVE $537!</div>
           <img src="https://myredtonic.com/nw-images/free-offer-6-nw.png" alt="img" class="img-responsive center-block free-offer">
           <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red3&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
-
             <div class="order_link">
-                 <button class="btn btn-primary">🛒 Add To Cart</button>
-             </div>
+              <button class="btn btn-primary">🛒 Add To Cart</button>
+            </div>
           </a>
-
           <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
           <div class="price-data">
-             TOTAL: <s>$891</s>
+            TOTAL: <s>$891</s>
             <span style="font-weight: bold;">$177</span>
             <br>
             <h5 class="pro-Guarantee">90 Days, 3 Bottle</h5>
@@ -318,23 +107,20 @@ hr {
     </div>
   </div>
   <div class="princ">
-    <img src="https://i.postimg.cc/0QL07xsX/image1-removebg-preview.png">
-     <h1 class="titulo-principal">InnovaBoost</h1>
-        <hr>
-        <p class="paragrafo">THE MAIN METHOD TO ELEVATE YOU SEX LIFE GOALS
-</p>
-        <h2 class="subtitulo">Always prepared for the moment.</h2>
+    <h1 class="titulo-principal">InnovaBoost</h1>
+    <hr>
+    <p class="paragrafo">THE MAIN METHOD TO ELEVATE YOU SEX LIFE GOALS</p>
+    <h2 class="subtitulo">Always prepared for the moment.</h2>
   </div>
-
-    <div class="cr2">
+  <div class="cr2">
     <div class="card">
       <div class="card-body">
         <div class="row">
           <div class="col-md-6">
             <p class="card-text">At the beginning of my journey developing the formula that would become the #1 formula for supporting your sex life goals, <b>InnovaBoost</b>, I never imagined that the day would come when I would help thousands of men around the world achieve their goals of enriching their lives through a natural and long-lasting male enhancement method.</p>
-           <p>
-           It's individuals like you who make all the effort and years dedicated to research and experimentation worth it, and my hope is that you get the most out of <b>InnovaBoost</b> while I keep production affordable.
-           </p>
+            <p>
+              It's individuals like you who make all the effort and years dedicated to research and experimentation worth it, and my hope is that you get the most out of <b>InnovaBoost</b> while I keep production affordable.
+            </p>
           </div>
           <div class="col-md-6">
             <img src="https://i.postimg.cc/k4ST32GP/encapsulado-inova-semfundo.png" class="card-img" alt="Imagem do Produto">
@@ -342,11 +128,423 @@ hr {
         </div>
       </div>
     </div>
-   </div>
   </div>
-  <p></p>
+
+  <!-- img lad lad -->
+  <div class="princ">
+    <h1 class="titulo-principal">BONUSES</h1>
+   <p class="paragrafo" style="color: #000; font-size: 23px">ON OUR WEBSITE, YOU GAIN DIRECT ACCESS TO A SERIES OF DIGITAL BONUSES
+</p>
+    <h2 class="subtitulo">JUST ACCESS THE INTERNET DIRECTLY OR DOWNLOAD IT TO YOUR COMPUTER, CELL PHONE OR TABLET</h2>
+    <hr>
+    <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="car-h2">STRONG ERECTIONS, WHEN YOU WANT IT!</h2>
+      <p class="card-text">
+        When you place your order, you get the books "King of Penis Enlargement" & "Be a Master of Sex" for free.
+        Forget about painful penis pumps and risky medications. With the teachings contained in these books, you will unlock natural growth in your body and master secret tantric techniques that will elevate you to the status of an expert in sexuality instantly.
+      </p>
+    </div>
+    <div class="col-md-6 custom-image-column">
+      <div class="row">
+        <div class="col-md-6 custom-background-image">
+          <img src="https://endopeak24.com/assets/img/cover1.jpg" alt="Imagem 1" class="custom-image">
+        </div>
+        <div class="col-md-6 custom-background-image">
+          <img src="https://endopeak24.com/assets/img/cover2.jpg" alt="Imagem 2" class="custom-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- img lad lad -->
+
+  <!-- Seção de Depoimentos -->
+  <div class="container-fluid cr3">
+    <div class="row text-center">
+      <div class="col-md-6 mx-auto">
+        <div class="testimonial">
+          <div class="row">
+            <div class="col-sm-4 col-12 mb-4 mb-sm-0">
+              <img src="https://i.postimg.cc/RZtWWPxM/1.jpg" class="testimonial-img" alt="Imagem do Depoimento">
+              <p class="testimonial-name">Jeff, Wyoming, USA</p>
+            </div>
+            <div class="col-sm-8 col-12">
+              <p class="testimonial-text">I thought the glory days were behind us, until I discovered <b>InnovaBoost</b>. Being a retired officer meant that fitness was always a priority for me. However, age advanced and with it came ED. That's when <b>InnovaBoost</b> appeared like a beacon of hope. Now, I feel like I've been rejuvenated! My partner and I are reliving the fullness of our love life, reminiscent of our youth</p>
+              <p class="testimonial-verified">VERIFIED PURCHASE ⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-depimento">
+
+    <!-- Novo depoimento -->
+    <div class="row text-center">
+      <div class="col-md-6 mx-auto">
+        <div class="testimonial">
+          <div class="row">
+            <div class="col-sm-4 col-12 mb-4 mb-sm-0">
+              <img src="https://i.postimg.cc/RZtWWPxM/2.jpg" class="testimonial-img" alt="Imagem do Depoimento">
+              <p class="testimonial-name">John, Connecticut, USA.</p>
+            </div>
+            <div class="col-sm-8 col-12">
+              <p class="testimonial-text">My job in finance is stressful, and slowing down before intimate moments was often a challenge. However, <b>InnovaBoost</b> has eliminated that wait. Including a capsule in my morning routine, alongside coffee, was revolutionary. Problems achieving fast and firm erections are a thing of the past. My younger wife and I are VERY happy in the bedroom…</p>
+              <p class="testimonial-verified">VERIFIED PURCHASE ⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-depimento">
+
+    <!-- Novo depoimento -->
+    <div class="row text-center">
+      <div class="col-md-6 mx-auto">
+        <div class="testimonial">
+          <div class="row">
+            <div class="col-sm-4 col-12 mb-4 mb-sm-0">
+              <img src="https://i.postimg.cc/RZtWWPxM/3.jpg" class="testimonial-img" alt="Imagem do Depoimento">
+              <p class="testimonial-name"> Amanda, Texas, USA.</p>
+            </div>
+            <div class="col-sm-8 col-12">
+              <p class="testimonial-text">IWatching my husband face erectile dysfunction has been an arduous journey. After years of searching, <b>InnovaBoost</b> emerged as our hope. Its effectiveness was remarkable from the start, revitalizing our connection and strengthening our relationship. Our marital happiness reached new heights. We are eternally grateful to <b>InnovaBoost</b> for restoring joy to our home.</p>
+              <p class="testimonial-verified">VERIFIED PURCHASE ⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="hr-depimento">
+
+    <!-- Novo depoimento -->
+    <div class="row text-center">
+      <div class="col-md-6 mx-auto">
+        <div class="testimonial">
+          <div class="row">
+            <div class="col-sm-4 col-12 mb-4 mb-sm-0">
+              <img src="https://i.postimg.cc/RZtWWPxM/3.jpg" class="testimonial-img" alt="Imagem do Depoimento">
+              <p class="testimonial-name"> Leonard, California, USA.</p>
+            </div>
+            <div class="col-sm-8 col-12">
+              <p class="testimonial-text">Insecurity about my sexual performance has always been a ghost in my life. But everything changed with <b>InnovaBoost</b>. It was a complete revolution: more vigor, long-lasting erections and a confidence that seemed unattainable. <b>InnovaBoost</b> redefined my love experience, marking a before and after in my life.</p>
+              <p class="testimonial-verified">VERIFIED PURCHASE ⭐⭐⭐⭐⭐</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr-depimento">
+
+    <div class="container">
+  <!-- Div com duas imagens lado a lado e duas imagens empilhadas à direita -->
+  <div class="row justify-content-center text-center">
+    <!-- Coluna com duas imagens lado a lado -->
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://endopeak24.com/assets/img/pa3.jpg?v=2" alt="Imagem 1" class="img-fluid mb-3">
+        </div>
+        <div class="col-md-6">
+          <img src="https://endopeak24.com/assets/img/pa.jpg?v=2" alt="Imagem 2" class="img-fluid mb-3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Coluna com duas imagens empilhadas à direita -->
+    <div class="col-md-6 s-5">
+      <img src="https://endopeak24.com/assets/img/pa3.jpg?v=2" alt="Imagem 3" class="img-fluid mb-3">
+      <img src="https://endopeak24.com/assets/img/pa4.jpg?v=9" alt="Imagem 4" class="img-fluid mb-3">
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+  <!-- Fim Seção de Depoimentos -->
+
+  <!-- Div com uma imagem centralizada -->
+<div class="container">
+  <div class="row mt-4 text-center">
+    <div class="col-md-10 text-center">
+      <img src="https://i.postimg.cc/PJ3gYLRm/Adicionar-um-t-tulo.png" alt="Imagem 5" class="img-fluid mx-auto">
+    </div>
+  </div>
+</div>
+<!-- Novo conteúdo -->
+<div class="container-fluid cr4">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <h2>SEE WHAT YOU WILL FIND INSIDE EACH InnovaBoost CAPSULE:</h2>
+      <p>ARE X PREMIUM QUALITY NUTRIENTS TO HELP YOU ACHIEVE YOUR SEXUAL GOALS</p>
+      <ul>
+        <li>Promotes Circulation</li>
+        <li>Heightens Libido</li>
+        <li>Oxidative Stress Shield</li>
+        <li>Facilitates Blood Flow</li>
+        <li>Testosterone Production Aid</li>
+        <li>Improves Sexual Performance</li>
+        <li>Enhances Natural Stamina</li>
+        <li>Supports Testosterone Levels</li>
+        <!-- Adicione mais itens conforme necessário -->
+      </ul>
+      <hr class="hr-depimento">
+
+      <h2>Q&A</h2>
+
+      <h2>FREQUENTLY ASKED QUESTIONS ABOUT InnovaBoost</h2>
+      <p><strong>Does InnovaBoost work for me?</strong></p>
+      <p><b>InnovaBoost</b> has been an exceptional support for the sexual lives of men in their 30s, 40s, 50s and even 70s. Thanks to its formulation, which is based on the principles of contemporary science, the InnovaBoost formula is effective and at the same time delicate, composed exclusively of ingredients of plant origin and natural minerals. Plus, you're guaranteed it's made in the United States in a state-of-the-art, FDA-registered, Good Manufacturing Practices (GMP)-certified facility.</p>
+
+      <h2>What results can I expect using InnovaBoost?</h2>
+
+      <p>
+        The experience with InnovaBoost varies in phases, based on how long the treatment has been used. Generally, they unfold as follows:
+Phase 1. You will notice a significant improvement in your general well-being, with an increase in energy, clearer thoughts and more restful sleep - remember how you felt ten or twenty years ago - this feeling will return. Phase 2. Your muscles and erections will become more robust, accompanied by an increase in your energy and vigor.
+Phase 3. The improvements you experience will become permanent, as long as you continue using InnovaBoost for at least three months straight. This stage is reached when the inflammation that was damaging your reproductive system is completely eradicated, allowing you to have a full sex life, no matter your age.
+</p>
+
+<h2>When will I start to have the effects?</h2>
+
+<p>
+  Each individual is unique, which means the time to notice the effects may vary. Most people report feeling a positive change within the first week of use. According to our studies, the most significant results are achieved with continuous use of InnovaBoost for a period of 3 months (or more), which is essential for the purification, restoration and rejuvenation process. Therefore, we strongly suggest that you consider our promotional package with a discount when purchasing 3 or 6 units.
+</p>
+
+<h2>What is the correct way to consume InnovaBoost?</h2>
+
+<p>The ideal way to consume InnovaBoost is to ingest it with a glass of water right after the first meal of the day, or follow the instructions provided on the packaging.
+</p>
+
+<h2>What if InnovaBoost doesn't work for me?</h2>
+
+<p>I want you to be more than satisfied with your purchase, I want you to be truly excited. But the truth is that you will only know for sure when you try it! Therefore, we offer you the opportunity to test InnovaBoost for a period of 60 days with our "No Questions Asked 100% Full Money Back Guarantee". The only way to be completely convinced is to put this extraordinary formula to the test and observe the effects in person.</p>
+
+<h2>How do I buy InnovaBoost and how long will it take for it to be in my home?</h2>
+
+<p>
+To ensure that you are purchasing the original product and to ensure the purity of the ingredients, please only purchase from the official website. We will ship your order directly to your home or office using premium carriers like FedEx or UPS. We aim to dispatch each order within 24 business hours and to make this easier, you will receive an email with the tracking number so you can track your package. On average, the package will arrive at your door in somewhere between 5 to 10 days for domestic orders.
+Is my purchase protected? How many times will my card be charged?
+<br>
+When purchasing InnovaBoost, only a one-time payment is required right here. There will be no additional charges for availing the product. Our website is highly secure, employing advanced technologies (such as SSL encryption) to protect and keep your data private.
+</p>
+<br>
+<hr class="hr-depimento">
+<!-- Div com uma imagem centralizada -->
+<div class="container">
+  <div class="row mt-4 text-center">
+    <div class="col-md-10 text-center">
+      <img src="https://i.postimg.cc/Z5yVPTKt/Design-sem-nome-5.png" alt="Imagem 5" class="img-fluid mx-auto">
+    </div>
+  </div>
+</div>
+<p>I want you to be more than satisfied with your purchase, I want you to be truly excited. But the truth is that you will only know for sure when you try it! Therefore, we offer you the opportunity to test (NAME) for a period of 60 days with our "No Questions Asked 100% Full Money Back Guarantee". The only way to be completely convinced is to put this extraordinary formula to the test and observe the effects in person.</p>
+
+<h2>How do I buy (NAME) and how long will it take for it to be in my home?</h2>
+
+<p>To ensure that you are purchasing the original product and to ensure the purity of the ingredients, please only purchase from the official website. We will ship your order directly to your home or office using premium carriers like FedEx or UPS. We aim to dispatch each order within 24 business hours and to make this easier, you will receive an email with the tracking number so you can track your package. On average, the package will arrive at your door in somewhere between 5 to 10 days for domestic orders.
+Is my purchase protected? How many times will my card be charged?
+
+The remarkable composition of (NAME) combines top-notch natural ingredients, sourced from various global regions, to work together, optimizing performance to the maximum. It stands out as the only natural supplement on the market specifically formulated to improve both the quality and duration of erections, also providing an increase in stamina and a significant boost in sexual desire.
+</p>
+<hr class="hr-depimento">
+<!-- Novo conteúdo -->
+<ul>
+      <li>Experience exceptional vitality, enjoy memorable intimate moments</li>
+      <li>100% NATURAL PERSONAL ENHANCEMENT FORMULA CREATED TO PROMOTE INTENSE VIGOR AT ANY MOMENT AND RAISE VITAL ENERGY FOR MAXIMUM EXPERIENCES!</li>
+      <li>Intense, reliable stamina with incredible experiences!*</li>
+      <li>Revitalized energy for prolonged and more satisfying experiences!*</li>
+      <li>Awaken faster and deeper with an increased desire for intense moments!*</li>
+      <li>The effects may vary from person to person. For optimal results, follow the recommendations for use.</li>
+      <li>Don't miss this unique opportunity to purchase (NAME) before stocks run out!</li>
+    </ul>
+    <section class="bg-white py-30">
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-12 text-start mx-auto">
+      <div class="buy-car d-flex align-items-center">
+        <img class="car me-3" src="https://endopeak24.com/assets/img/car-black.png" loading="lazy">
+        <div class="car-text">
+          <h3 class="fw-normal mb-0 text-start font-third text-black fw-bold">Every 6 Bottles Order Gets FREE Shipping Too!</h3>
+          <p class="mb-0 text-start text-black small">*96% Of Customers Order 6 Bottles (Our Recommended Option)</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+    </div>
+  </div>
+ </div>
+<div class="cr2">
+ <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="offer-text">
+          <h1 class="text-center fw-bold text-white pb-3 mb-0 font-third has-separator-center">Don't miss this unique opportunity to purchase <b>InnovaBoost</b> before stocks run out!</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cr2" style="clip-path: polygon(100% 0, 0 0, 50% 49%);max-width: 792px;margin: -2px auto 0;margin-bottom: -125px;"></div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+    <div class="row justify-content-center text-center">
+      <!-- Coluna 1 -->
+      <div class="col-md-4 col-sm-6">
+        <!-- Box de Preço -->
+        <div class="price-box">
+          <h2>Basic</h2>
+          <h3>30 Days, 1 Bottle</h3>
+          <img class="pt" src="https://i.postimg.cc/k4ST32GP/encapsulado-inova-semfundo.png" class="img-responsive center-block pro-img" alt="img">
+          <div class="price-per-bottle">
+            <span class="price-large">$69</span>
+            <span class="per-bottle-span">Per <br> Bottle</span>
+          </div>
+          <div class="money-saving"></div>
+          <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red1&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
+            <div class="order_link">
+              <button class="btn btn-primary">🛒 Add To Cart</button>
+            </div>
+          </a>
+          <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
+          <div class="price-data">
+            TOTAL: <s>$179</s>
+            <span style="font-weight: bold;">$69</span>
+            <br>
+            <h5 class="pro-Guarantee">180 Days, 6 Bottle</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna 2 -->
+      <div class="col-md-4 col-sm-6">
+        <!-- Box de Preço -->
+        <div class="price-box">
+          <h2>Best Value</h2>
+          <h3>180 Days, 6 Bottle</h3>
+          <img class="pt" src="https://i.postimg.cc/ryfRWfF5/Design-sem-nome-3.png" class="img-responsive center-block pro-img" alt="img">
+          <div class="price-per-bottle">
+            <span class="price-large">$49</span>
+            <span class="per-bottle-span">Per <br> Bottle</span>
+          </div>
+          <div class="money-saving">YOU SAVE $1074!</div>
+          <img src="https://myredtonic.com/nw-images/free-offer-6-nw.png" alt="img" class="img-responsive center-block free-offer">
+          <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red6&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
+            <div class="order_link">
+              <button class="btn btn-primary">🛒 Add To Cart</button>
+            </div>
+          </a>
+          <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
+          <div class="price-data">
+            TOTAL: <s>$1782</s>
+            <span style="font-weight: bold;">$294</span>
+            <br>
+            <h5 class="pro-Guarantee">180 Days, 6 Bottle</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna 3 -->
+      <div class="col-md-4 col-sm-6">
+        <!-- Box de Preço -->
+        <div class="price-box">
+          <h2>Most Popular</h2>
+          <h3>90 Days, 3 Bottle</h3>
+          <img class="pt" src="https://i.postimg.cc/MGpGFBsX/Design-sem-nome-2.png" class="img-responsive center-block pro-img" alt="img">
+          <div class="price-per-bottle">
+            <span class="price-large">$59</span>
+            <span class="per-bottle-span">Per <br> Bottle</span>
+          </div>
+          <div class="money-saving">YOU SAVE $537!</div>
+          <img src="https://myredtonic.com/nw-images/free-offer-6-nw.png" alt="img" class="img-responsive center-block free-offer">
+          <a class="order_link" href="https://buygoods.com/secure/checkout.html?sessid2=sessid2024050922453890&amp;account_id=7949&amp;product_codename=red3&amp;redirect=aHR0cHM6Ly9teXJlZHRvbmljLmNvbS9zcC9udjEvdTEtNg==">
+            <div class="order_link">
+              <button class="btn btn-primary">🛒 Add To Cart</button>
+            </div>
+          </a>
+          <img src="https://myredtonic.com/nw-images/pack-cards.png" alt="img" class="img-responsive center-block pack-cards">
+          <div class="price-data">
+            TOTAL: <s>$891</s>
+            <span style="font-weight: bold;">$177</span>
+            <br>
+            <h5 class="pro-Guarantee">90 Days, 3 Bottle</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bg-white position-relative z-2 px-3" style="border-radius: 1rem;">
+<h1 class="text-center color2 mb-4 has-separator-center font-third fw-bold">Scientific References</h1>
+<div class="row reference">
+<div class="col-md-6 col-lg-6 col-xl-6 d-md-flex d-xl-flex align-items-md-center align-items-xl-center pb-4">
+<div class="row d-xxl-flex align-items-xxl-center">
+<div class="col d-xl-flex align-items-xl-center"><img class="img-fluid img-fluid mx-auto" src="https://endopeak24.com/assets/img/dept_med_stacked_2x.png" title="DM" loading="lazy"></div>
+<div class="col"><img class="img-fluid img-fluid mx-auto" src="https://endopeak24.com/assets/img/kisspng-harvard-university-logo-harvard-crimson-football-5b915f071e0344.9092574415362537031229.jpg" title="hvd" loading="lazy"></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-6 col-xl-6 pb-4">
+<div class="row d-xxl-flex align-items-xxl-center">
+<div class="col d-xl-flex align-items-xl-center"><img class="img-fluid img-fluid mx-auto" src="https://endopeak24.com/assets/img/626ba57d1dc4c3b537787e28.png" title="UoS" loading="lazy"></div>
+<div class="col d-md-flex d-xl-flex align-items-md-center align-items-xl-center"><img class="img-fluid img-fluid mx-auto" src="https://endopeak24.com/assets/img/Adelaide-logo-horizontal-2013-e1419344953654.jpg" title="TUA" loading="lazy"></div>
+</div>
+</div>
+<div class="col-md-6 col-lg-6">
+<ol class="reference_list">
+<li>Zou, H., Zhang, X., Chen, W. et al. Vascular endothelium is the basic way for stem cells to treat erectile dysfunction: a bibliometric study. Cell Death Discov. 9, 143 (2023). https://doi.org/10.1038/s41420-023-01443-9</li>
+<li> Nunes KP, Labazi H, Webb RC. New insights into hypertension-associated erectile dysfunction. Curr Opin Nephrol Hypertens. 2012 Mar;21(2):163-70. doi: 10.1097/MNH.0b013e32835021bd. PMID: 22240443; PMCID: PMC4004343. </li>
+<li> Dell'Agli M, Galli GV, Dal Cero E, Belluti F, Matera R, Zironi E, Pagliuca G, Bosisio E. Potent inhibition of human phosphodiesterase-5 by icariin derivatives. J Nat Prod. 2008 Sep;71(9):1513-7. doi: 10.1021/np800049y. Epub 2008 Sep 9. PMID: 18778098.</li>
+<li>Borrelli F, Colalto C, Delfino DV, Iriti M, Izzo AA. Herbal Dietary Supplements for Erectile Dysfunction: A Systematic Review and Meta-Analysis. Drugs. 2018 Apr;78(6):643-673. doi: 10.1007/s40265-018-0897-3. PMID: 29633089.</li>
+<li>Cui T, Kovell RC, Brooks DC, Terlecki RP. A Urologist's Guide to Ingredients Found in Top-Selling Nutraceuticals for Men's Sexual Health. J Sex Med. 2015 Nov;12(11):2105-17. doi: 10.1111/jsm.13013. Epub 2015 Nov 3. PMID: 26531010. </li>
+</ol>
+</div>
+<div class="col-md-6 col-lg-6">
+<ol class="reference_list" start="6">
+<li>Liu TC, Lin CH, Huang CY, Ivy JL, Kuo CH. Effect of acute DHEA administration on free testosterone in middle-aged and young men following high-intensity interval training. Eur J Appl Physiol. 2013 Jul;113(7):1783-92. doi: 10.1007/s00421-013-2607-x. Epub 2013 Feb 17. PMID: 23417481.</li>
+<li>Farag YMK, Guallar E, Zhao D, Kalyani RR, Blaha MJ, Feldman DI, Martin SS, Lutsey PL, Billups KL, Michos ED. Vitamin D deficiency is independently associated with greater prevalence of erectile dysfunction: The National Health and Nutrition Examination Survey (NHANES) 2001-2004. Atherosclerosis. 2016 Sep;252:61-67. doi: 10.1016/j.atherosclerosis.2016.07.921. Epub 2016 Jul 29. PMID: 27505344; PMCID: PMC5035618.</li>
+<li>Ng CF, Lee CP, Ho AL, Lee VW. Effect of niacin on erectile function in men suffering erectile dysfunction and dyslipidemia. J Sex Med. 2011 Oct;8(10):2883-93. doi: 10.1111/j.1743-6109.2011.02414.x. Epub 2011 Aug 2. PMID: 21810191. </li>
+<li>Yan WJ, Yu N, Yin TL, Zou YJ, Yang J. A new potential risk factor in patients with erectile dysfunction and premature ejaculation: folate deficiency. Asian J Androl. 2014 Nov-Dec;16(6):902-6. doi: 10.4103/1008-682X.135981. PMID: 25080932; PMCID: PMC4236337.</li>
+</ol>
+</div>
+</div>
+
+<div class="text-center pt-5 position-relative label-block"><img class="img-ul" src="https://i.postimg.cc/k4ST32GP/encapsulado-inova-semfundo.png" title="btl-lbl" loading="lazy"><a class="d-block modal-label-trigger" href="#" data-bs-target="#modal-label" data-bs-toggle="modal"><i class="icon-magnifier-add zoom-icon d-block"></i></a></div>
+</div>
+
+      <!-- Adicione mais perguntas e respostas conforme necessário -->
+    </div>
+  </div>
+</div>
+<footer class="black-footer">
+    <div class="container">
+        <ul class="footer-menu">
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">REFERENCES</a></li>
+            <li><a href="#">TERMS</a></li>
+            <li><a href="#">PRIVACY</a></li>
+            <li><a href="#">RETURN POLICY</a></li>
+            <li><a href="#">SHIPPING</a></li>
+            <li><a href="#">DISCLAIMER</a></li>
+            <li><a href="#">REPORT SPAM</a></li>
+        </ul>
+        <p class="footer-disclaimer">
+            BuyGoods is the retailer of this product. BuyGoods is a registered trademark of BuyGoods, a Delaware corporation located at 1201 N Orange Street Suite #7223, Wilmington, DE, 19801, USA and used by permission. BuyGoods role as retailer does not constitute an endorsement, approval or review of this product or any claim, statement or opinion used in promotion of this product. Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease.<br><br>
+            © EndoPeak Research 2023 All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
